@@ -1,0 +1,30 @@
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $header-height;
+  border-bottom: $color-grey-1 solid $header-bottom-size;
+  padding: 0 20px;
+  
+  &-brand, &-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-brand {
+    &-title {
+      font-weight: bold;
+      font-size: 20px;
+    }
+    &-motto {
+      display: inline-block;
+      margin-left: 5px;
+      font-size: 12px;
+      color: $color-grey-7;
+    }
+  }
+}
