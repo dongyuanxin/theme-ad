@@ -1,0 +1,43 @@
+// Here you put all global css rules.
+
+* {
+  box-sizing: border-box; /* boostrap已经在通配符选择器这么做了 */
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: $font-size;
+  color: $color-grey-9;
+}
+
+body, input, label, select, option, textarea, button, fieldset, legend {
+  font-family: Arial, PingFang SC, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: $color-blue-5;
+  text-decoration: none;
+  transition: all .1s linear;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: none;
+    color: $color-blue-3;
+  }
+}
+
+.clearfix {
+  *zoom: 1; /* 兼容 IE 低版本 */
+
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
