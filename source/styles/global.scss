@@ -21,14 +21,12 @@ body {
 }
 
 a {
-  color: $color-blue-5;
+  color: $color-grey-9;
   text-decoration: none;
-  transition: all .1s linear;
-  cursor: pointer;
 
   &:hover {
     text-decoration: none;
-    color: $color-blue-3;
+    color: $color-grey-9;
   }
 }
 

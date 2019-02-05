@@ -6,8 +6,9 @@
   left: 0;
   width: 100%;
   height: $header-height;
-  border-bottom: $color-grey-1 solid $header-bottom-size;
-  padding: 0 20px;
+  border-bottom: $color-grey-0 solid $header-bottom-size;
+  padding-left: 20px;
+  background: white;
   
   &-brand, &-right {
     display: flex;
@@ -25,6 +26,48 @@
       margin-left: 5px;
       font-size: 12px;
       color: $color-grey-7;
+    }
+  }
+
+  &-navigation {
+    font-size: 16px;
+    margin-right: 10px;
+    a {
+      margin-right: 10px;
+      color: $color-grey-5;
+      transition: all .3s linear;
+
+      &:hover {
+        color: $color-grey-7;
+      }
+    }
+  }
+
+  &-btn {
+    font-size: 18px;
+    display: flex;
+    justify-content: flex-end;
+
+    span {
+      display: inline-block;
+      text-align: center;
+      height: $header-height - $header-bottom-size;
+      line-height: $header-height - $header-bottom-size;
+      width: $header-height - $header-bottom-size;
+      background: red;
+      cursor: pointer;
+
+      &:first-child {
+        background: $color-light-blue-3;
+      }
+
+      &:last-child {
+        background: $color-light-blue-5;
+      }
+
+      i {
+        color: white;
+      }
     }
   }
 }
