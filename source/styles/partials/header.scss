@@ -71,3 +71,12 @@
     }
   }
 }
+
+#site-process {
+  position: fixed;
+  left: 0;
+  top: $header-height - $header-bottom-size;
+  height: $header-bottom-size;
+  width: 0;
+  background: $color-blue-4;
+}
