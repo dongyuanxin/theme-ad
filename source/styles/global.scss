@@ -30,6 +30,14 @@ a {
   }
 }
 
+main {
+  display: block;
+  margin: 0 auto;
+  padding: $header-height 0 $bottom-bar-height;
+  min-height: 100vh;
+  max-width: 960px;
+}
+
 .clearfix {
   *zoom: 1; /* 兼容 IE 低版本 */
 
