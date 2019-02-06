@@ -33,8 +33,8 @@ a {
 main {
   display: block;
   margin: 0 auto;
-  padding: $header-height 0 $bottom-bar-height;
-  min-height: 100vh;
+  padding-top: $header-height;
+  min-height: calc(100vh - #{$bottom-bar-height});
   max-width: 960px;
 }
 
