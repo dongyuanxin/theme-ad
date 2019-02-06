@@ -1,3 +1,41 @@
 .site-footer {
-  
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px calc((100% - 1100px) / 2);
+  margin-bottom: $bottom-bar-height - 1px;
+  background: $color-blue-grey-7;
+  font-size: 15px;
+
+  &-col {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px;
+    width: 33.33333%;
+
+    h5 {
+      margin-bottom: 16px;
+      font-size: 1.1em;
+      color: $color-blue-grey-1;
+    }
+
+    span {
+      display: inline-block;
+      margin-bottom: 8px;
+      font-weight: bold;
+
+      a {
+        color: $color-grey-2;
+        transition: all .15s linear; 
+
+        &:hover {
+          color: white; 
+        }
+      }
+    }
+  }
+
+  &-info {
+    width: 100%;
+    color: $color-blue-grey-1;
+  }
 }
