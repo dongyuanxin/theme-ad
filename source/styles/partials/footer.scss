@@ -1,7 +1,7 @@
 .site-footer {
   display: flex;
   flex-wrap: wrap;
-  padding: 30px calc((100% - 1100px) / 2);
+  padding: 30px calc((100% - #{$main-width}) / 2);
   margin-bottom: $bottom-bar-height - 1px;
   background: $color-blue-grey-7;
   font-size: 15px;
