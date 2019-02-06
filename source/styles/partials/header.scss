@@ -7,7 +7,7 @@
   width: 100%;
   height: $header-height;
   border-bottom: $color-grey-0 solid $header-bottom-size;
-  padding-left: 20px;
+  padding-left: 10px;
   background: white;
   
   &-brand, &-right {
@@ -19,12 +19,12 @@
   &-brand {
     &-title {
       font-weight: bold;
-      font-size: 20px;
+      font-size: 24px;
     }
     &-motto {
       display: inline-block;
       margin-left: 5px;
-      font-size: 12px;
+      font-size: 14px;
       color: $color-grey-7;
     }
   }
