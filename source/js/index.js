@@ -1,7 +1,7 @@
 (() => {
   const srcs = [
-    '/js/util.js',
-    '/js/scroll.js'
+    '/js/scroll.js',
+    '/js/backTop.js'
   ];
 
   const loadScript = (src) => {
