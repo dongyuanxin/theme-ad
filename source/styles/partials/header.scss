@@ -9,6 +9,7 @@
   border-bottom: $color-grey-0 solid $header-bottom-size;
   padding-left: 10px;
   background: white;
+  z-index: 300;
   
   &-brand, &-right {
     display: flex;
@@ -79,4 +80,5 @@
   height: $header-bottom-size;
   width: 0;
   background: $color-blue-4;
+  z-index: 300;
 }

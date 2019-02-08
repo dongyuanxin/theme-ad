@@ -4,11 +4,9 @@
 
   &-article-wrapper {
     display: block;
-    position: relative;
     min-height: 330px;
     margin: 30px 0;
     border-radius: $border-radius-size;
-    z-index: 1;
   }
 
   &-article-cover {
@@ -18,7 +16,7 @@
     width: 50%;
     height: 100%;
     transition: all .3s ease;
-    z-index: inherit;
+    z-index: -1;
 
     &:hover {
       z-index: 100;
@@ -33,23 +31,26 @@
     }
   }
 
-  &-article {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%; 
+  &-article-inner {
     transition: all .3s ease;
     background: white;
-    width: 50%;
+    width: 100%;
     padding: 60px 60px 100px;
-    border-top-left-radius: $border-radius-size;
-    border-bottom-left-radius: $border-radius-size;
-    z-index: inherit;
 
     &:hover {
       z-index: 100;
-      width: calc(50% + 30px);
+      width: calc(100% + 20px);
     }
+  }
+
+  &-article {
+    position: relative;
+    height: 100%; 
+    width: 100%;
+    padding-right: 50%;
+    border-top-left-radius: $border-radius-size;
+    border-bottom-left-radius: $border-radius-size;
+    z-index: 1;
 
     &-title {
       font-size: 32px;
