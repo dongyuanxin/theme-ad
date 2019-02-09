@@ -8,7 +8,7 @@
   height: $header-height;
   border-bottom: $color-grey-0 solid $header-bottom-size;
   padding-left: 10px;
-  background: white;
+  background: $color-grey-0;
   z-index: 300;
   
   &-brand, &-right {
