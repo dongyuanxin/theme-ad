@@ -73,9 +73,31 @@
     }
 
     p a {
+      display: inline-block;
+      position: relative;
       color: $color-deep-orange-6;
       font-weight: bolder;
-      transition: all .15s linear;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        right: 0;
+        bottom: 0;
+        height: 2px;
+        background: $color-blue-5;
+        transition: all 0.3s ease;
+      }
+
+      &:hover {
+        color: $color-blue-5;
+
+        &::before {
+          width: 100%;
+          left: 0;
+          right: auto;
+        }
+      }
     }
 
     code {
