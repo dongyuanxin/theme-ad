@@ -102,9 +102,9 @@
 
     code {
       font-family: "Consolas", "Microsoft Jhenghei", "Hiragino Sans GB", "Microsoft YaHei";
-      padding: 2px 4px;
-      background: $color-grey-1;
-      color: #1f2d3d;
+      padding: 4px 6px;
+      background: $color-grey-2;
+      color: $color-deep-orange-8;
       word-wrap: break-word;
     }
 
@@ -112,12 +112,12 @@
       display: inline-block;
       width: 100%;
       border-radius: 10px;
-      border: 2px solid $color-grey-2;
+      border: 1px solid $color-grey-2;
       cursor: pointer;
-      transition: all .15s linear;
+      transition: all .3s linear;
 
       &:hover {
-        border: 2px solid $color-blue-2;
+        box-shadow: 0 0 3px $color-grey-5;
       }
     }
   
@@ -130,7 +130,7 @@
       }
     }
 
-    table {
+    & > table {
       width: 100%;
       border-collapse: collapse;
       text-align: left;
