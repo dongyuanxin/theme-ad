@@ -1,20 +1,22 @@
 <header class="site-header">
   <div class="site-header-brand">
-    <span class="site-header-brand-title"> GODBMW </span>
+    <span class="site-header-brand-title"><a href="/">GODBMW</a></span>
     <span class="site-header-brand-motto"> | STEP BY STEP</span>
   </div>
   <div class="site-header-right">
     <nav class="site-header-navigation">
-      <a href="https://github.com/">Home</a>
-      <a href="https://github.com/">Archive</a>
-      <a href="https://github.com/">Tag</a>
-      <a href="https://github.com/">Friend</a>
-      <a href="https://github.com/">About</a>
+      <a href="/">Home</a>
+      <a href="/archives/">Archive</a>
+      <a href="/tags/">Tag</a>
+      <a href="/friends/">Friend</a>
+      <a href="/about/">About</a>
     </nav>
     <div class="site-header-btn">
-      <span>
-        <a href="https://github.com/"><i class="fa fa-github-alt"></i></a>
-      </span>
+      <% if(theme.github) { %>
+        <span>
+          <a href="<%- theme.github %>" target="_blank"><i class="fa fa-github-alt"></i></a>
+        </span>
+      <% } %>
       <span>
         <i class="fa fa-search"></i>
       </span>
