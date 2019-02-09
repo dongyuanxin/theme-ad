@@ -36,6 +36,8 @@
     background: white;
     width: 100%;
     padding: 60px 60px 100px;
+    border-top-left-radius: $border-radius-size;
+    border-bottom-left-radius: $border-radius-size;
 
     &:hover {
       z-index: 100;
@@ -48,8 +50,6 @@
     height: 100%; 
     width: 100%;
     padding-right: 50%;
-    border-top-left-radius: $border-radius-size;
-    border-bottom-left-radius: $border-radius-size;
     z-index: 1;
 
     &-title {
