@@ -35,13 +35,19 @@
     transition: all .3s ease;
     background: white;
     width: 100%;
-    padding: 60px 60px 100px;
-    border-top-left-radius: $border-radius-size;
-    border-bottom-left-radius: $border-radius-size;
+    padding: 60px;
+    border-radius: $border-radius-size;
 
-    &:hover {
-      z-index: 100;
-      width: calc(100% + 20px);
+    &[data-cover=true] {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+
+      &:hover {
+        z-index: 100;
+        // 防止内容换行
+        padding-left: 80px;
+        width: calc(100% + 20px);
+      }
     }
   }
 
@@ -49,8 +55,15 @@
     position: relative;
     height: 100%; 
     width: 100%;
-    padding-right: 50%;
     z-index: 1;
+
+    &[data-cover=false] {
+      padding-right: 0;
+    }
+
+    &[data-cover=true] {
+      padding-right: 50%;
+    }
 
     &-title {
       font-size: 32px;
@@ -62,6 +75,21 @@
       font-size: 16px;
     }
 
+    &-read {
+      display: inline-block;
+      margin-top: 10px;
+      margin-left: 0; 
+      color: $color-grey-5;
+      font-weight: 600;
+      font-size: 18px;
+      font-style: italic;
+      transition: all .1s linear;
+
+      &:hover {
+        color: $color-grey-7;
+        margin-left: 10px;
+      }
+    }
   }
 }
 
