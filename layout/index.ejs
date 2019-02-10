@@ -35,6 +35,13 @@
           <a class="home-article-read" href="<%- url_for(psg.path) %>">
             README MORE >>>
           </a>
+          <% if(psg.tags.length > 0) { %>
+            <div class="home-article-tags">
+            <% for(let tag of psg.tags.data) { %> 
+              <a href="<%- url_for(tag.path) %>"><i class="fa fa-tags"></i><%- tag.name %></a>
+            <% } %>
+            </div>
+          <% } %>
         </div>
         <% if(psg.cover) { %>
           <div class="home-article-cover">
