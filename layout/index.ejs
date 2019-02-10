@@ -7,9 +7,9 @@
             <span>
               <i class="fa fa-calendar"></i><%- psg.date.format("YYYY-MM-DD") %>
             </span>
-            <% if(psg.categories.data && psg.categories.data.length > 0) { %>
+            <% if(psg.categories.length > 0) { %>
               <span>
-                | <i class="fa fa-bookmark"></i><%- psg.categories.data[0].name %>
+                | <a href="<%- url_for(psg.categories.data[0].path) %>"><i class="fa fa-bookmark"></i><%- psg.categories.data[0].name %></a>
               </span>
             <% } %>
             <% if(psg.passwords && psg.passwords.length > 0) { %>
