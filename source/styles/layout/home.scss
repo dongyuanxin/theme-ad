@@ -67,7 +67,6 @@
 
     &-meta {
       font-size: 16px;
-      margin-bottom: 10px;
       color: $color-grey-7;
 
       i {
@@ -79,6 +78,7 @@
     &-title {
       font-size: 32px;
       line-height: 42px;
+      margin: 15px 0 20px;
     }
 
     &-content {
@@ -88,7 +88,7 @@
 
     &-read {
       display: inline-block;
-      margin-top: 10px;
+      margin-top: 15px;
       margin-left: 0; 
       color: $color-grey-5;
       font-weight: 600;
