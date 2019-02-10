@@ -1,5 +1,5 @@
 .post {
-  max-width: 660px;
+  max-width: 960px;
   margin: 0 auto;
 
   &-article {
@@ -73,7 +73,7 @@
       background: $color-grey-1;
     }
 
-    p a {
+    a {
       display: inline-block;
       position: relative;
       color: $color-deep-orange-6;
