@@ -1,24 +1,38 @@
+<%
+  let next = {}, prev = {};
+  if(is_home()) {
+    prev.link = url_for(page.prev_link);
+    next.link = url_for(page.next_link);
+  }
+  
+  prev.enable = !is_current(prev.link);
+  next.enable = !is_current(next.link);
+
+  !prev.enable && (prev.link = 'javascript:void(0);');
+  !next.enable && (next.link = 'javascript:void(0);');
+%>
+
 <div class="bottom-bar">
   <div class="bottom-bar-left">
-    <span>
+    <a href="<%- prev.link %>" data-enable="<%- prev.enable %>">
       <i class="fa fa-arrow-left"></i>
-    </span>
-    <span>
+    </a>
+    <a href="<%- next.link %>" data-enable="<%- next.enable %>">
       <i class="fa fa-arrow-right"></i>
-    </span>
+    </a>
   </div>
   <div class="bottom-bar-right">
-    <span>
+    <a href="javascript:void(0);">
       <i class="fa fa-bars"></i>
-    </span>
-    <span>
+    </a>
+    <a href="javascript:void(0);">
       <i class="fa fa-commenting"></i>
-    </span>
-    <span>
+    </a>
+    <a href="javascript:void(0);">
       <i class="fa fa-thumbs-up"></i>
-    </span>
-    <span id="back-top-btn">
+    </a>
+    <a href="javascript:void(0);" id="back-top-btn">
       <i class="fa fa-chevron-up"></i>
-    </span>
+    </a>
   </div>
 </div>

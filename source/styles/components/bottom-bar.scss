@@ -15,19 +15,70 @@
     align-items: center;
   }
 
-  span {
-    cursor: pointer;
+  a {
+    display: inline-block;
     width: 40px;
     height: 40px;
     line-height: 40px;
     text-align: center;
-    color: $color-blue-4;
     transition: all .15s linear;
+    color: $color-blue-4;
 
     &:hover {
       border-radius: 50%;
-      background: $color-blue-4;
       color: white;
+      background: $color-blue-4;
+    }
+
+    &[data-enable="false"] {
+      color: $color-blue-2;
+      cursor: not-allowed;
+
+      &:hover {
+        color: white;
+        background: $color-blue-2;
+      }
+    }
+  }
+
+  span {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    transition: all .15s linear;
+
+    a {
+      display: inline-block;
+      color: $color-blue-4;
+      width: 40px;
+      height: 40px;
+    }
+
+    &:hover {
+      border-radius: 50%;
+      color: white;
+      a {
+        color: white;
+      }
+    }
+
+    &[data-enable="false"] {
+      cursor: not-allowed;
+      &:hover {
+        background: $color-blue-2;
+        a {
+          cursor: not-allowed;
+        }
+      }
+    }
+
+    &[data-enable="true"] {
+      color: $color-blue-4;
+      cursor: pointer;
+      &:hover {
+        background: $color-blue-4;
+      }
     }
   }
 }
