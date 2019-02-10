@@ -1,8 +1,10 @@
 <%
-  let next = {}, prev = {};
+  let next = {}, prev = {}, catalog, comments;
   if(is_home()) {
     prev.link = url_for(page.prev_link);
     next.link = url_for(page.next_link);
+    catalog = false;
+    comments = false;
   }
   
   prev.enable = !is_current(prev.link);
@@ -22,10 +24,10 @@
     </a>
   </div>
   <div class="bottom-bar-right">
-    <a href="javascript:void(0);">
+    <a href="javascript:void(0);" data-enable="<%- catalog %>">
       <i class="fa fa-bars"></i>
     </a>
-    <a href="javascript:void(0);">
+    <a href="javascript:void(0);" data-enable="<%- comments %>">
       <i class="fa fa-commenting"></i>
     </a>
     <a href="javascript:void(0);">
