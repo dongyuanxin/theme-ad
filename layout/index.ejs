@@ -3,6 +3,25 @@
     <div class="home-article-wrapper clearfix">
       <div class="home-article" data-cover="<%- !!psg.cover %>">
         <div class="home-article-inner" data-cover="<%- !!psg.cover %>">
+          <div class="home-article-meta">
+            <span>
+              <i class="fa fa-calendar"></i><%- psg.date.format("YYYY-MM-DD") %>
+            </span>
+            <% if(psg.categories.data && psg.categories.data.length > 0) { %>
+              <span>
+                | <i class="fa fa-bookmark"></i><%- psg.categories.data[0].name %>
+              </span>
+            <% } %>
+            <% if(psg.passwords && psg.passwords.length > 0) { %>
+              <span>
+                | <i class="fa fa-lock"></i>LOCK
+              </span>
+            <% } else { %>
+              <span>
+                | <i class="fa fa-unlock-alt"></i>UNLOCK
+              </span>
+            <% } %>
+          </div>
           <h1 class="home-article-title">
             <%- psg.title %>
           </h1>
