@@ -3,15 +3,20 @@
   if(is_home()) {
     prev.link = url_for(page.prev_link);
     next.link = url_for(page.next_link);
+    prev.enable = !is_current(prev.link);
+    next.enable = !is_current(next.link);
+    !prev.enable && (prev.link = 'javascript:void(0);');
+    !next.enable && (next.link = 'javascript:void(0);');
     catalog = false;
     comments = false;
+  } else if (is_post()) {
+    prev.link = page.prev ? url_for(page.prev.path) : 'javascript:void(0);';
+    prev.enable = !!page.prev;
+    next.link = page.next ? url_for(page.next.path) : 'javascript:void(0);';
+    next.enable = !!page.next;
+    catalog = true;
+    comments = true;
   }
-  
-  prev.enable = !is_current(prev.link);
-  next.enable = !is_current(next.link);
-
-  !prev.enable && (prev.link = 'javascript:void(0);');
-  !next.enable && (next.link = 'javascript:void(0);');
 %>
 
 <div class="bottom-bar">
