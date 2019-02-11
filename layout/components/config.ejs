@@ -1,0 +1,29 @@
+<script>
+  // theme-ad's config script
+  // it can be used in every script
+  <%
+    const handleArray = param => {
+      let arr = [];
+
+      if(typeof param === 'string') {
+        arr.push(param);
+      }
+
+      if(Array.isArray(param)) {
+        arr = arr.concat(param);
+      }
+
+      return arr;
+    }
+
+    const passwords = handleArray(theme.passwords).concat(handleArray(page.passwords));
+    const psdArr = '[' + passwords.reduce((acc, cureent) => acc + `"${cureent}", `, '') + ']';
+  %>
+  window.AD_CONFIG = {
+    leancloud: <%- JSON.stringify(theme.leancloud) %>,
+    start_time: "<%- theme.start_time %>",
+    passwords: <%- psdArr %>,
+    is_post: <%- is_post() %>,
+    lock: <%- page.lock === true %>
+  };
+</script>
