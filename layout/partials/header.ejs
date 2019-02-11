@@ -1,7 +1,13 @@
 <header class="site-header">
   <div class="site-header-brand">
-    <span class="site-header-brand-title"><a href="/">GODBMW</a></span>
-    <span class="site-header-brand-motto"> | STEP BY STEP</span>
+    <% if(theme.nav_name) { %>
+      <span class="site-header-brand-title">
+        <a href="/"><%- theme.nav_name %></a>
+      </span>
+    <% } %>
+    <% if(theme.motto) { %>
+      <span class="site-header-brand-motto"> | <%- theme.motto %></span>
+    <% } %>
   </div>
   <div class="site-header-right">
     <nav class="site-header-navigation">
