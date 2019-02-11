@@ -1,5 +1,5 @@
 .post {
-  max-width: 960px;
+  max-width: 860px;
   margin: 20px auto;
 
   &-article {
@@ -66,7 +66,7 @@
     }
 
     blockquote {
-      margin: 10px 0;
+      margin: 15px 0;
       padding: 1px 12px;
       border-left: 3px solid $color-grey-6;
       color: $color-grey-8;
@@ -170,6 +170,28 @@
     font-size: 36px;
     line-height: 42px;
     margin: 25px 0 40px;
+  }
+
+  &-cover {
+    display: block;
+    width: 100%;
+    position: relative;
+    padding-bottom: 50%;
+    margin-bottom: 40px;
+
+    figure {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      overflow: hidden;
+      border-radius: 10px;
+      background-position: 50% 50%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
   }
 
   &-meta {

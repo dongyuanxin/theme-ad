@@ -21,6 +21,11 @@
   <h1 class="post-title">
     <%- page.title %>
   </h1>
+  <% if(page.cover){ %>
+    <div class="post-cover">
+      <figure style="background-image:url(<%- page.cover %>);"></figure>
+    </div>
+  <% } %>
   <article class="post-article">
     <%- page.more %>
   </article>
