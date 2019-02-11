@@ -3,7 +3,7 @@
     <div class="home-article-wrapper clearfix">
       <div class="home-article" data-cover="<%- !!psg.cover %>">
         <div class="home-article-inner" data-cover="<%- !!psg.cover %>">
-          <div class="home-article-meta">
+          <div class="post-meta">
             <span>
               <i class="fa fa-calendar"></i><%- psg.date.format("YYYY-MM-DD") %>
             </span>
@@ -22,7 +22,7 @@
               </span>
             <% } %>
           </div>
-          <h1 class="home-article-title">
+          <h1 class="post-title" style="font-size: 26px;">
             <%- psg.title %>
           </h1>
           <div class="home-article-content post-article">
@@ -36,7 +36,7 @@
             README MORE >>>
           </a>
           <% if(psg.tags.length > 0) { %>
-            <div class="home-article-tags">
+            <div class="post-tags">
             <% for(let tag of psg.tags.data) { %> 
               <a href="<%- url_for(tag.path) %>"><i class="fa fa-tags"></i><%- tag.name %></a>
             <% } %>

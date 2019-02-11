@@ -1,5 +1,34 @@
 <div class="post">
+  <div class="post-meta">
+    <span>
+      <i class="fa fa-calendar"></i><%- page.date.format("YYYY-MM-DD") %>
+    </span>
+    <% if(page.categories.length > 0) { %>
+      <span>
+        | <a href="<%- url_for(page.categories.data[0].path) %>"><i class="fa fa-bookmark"></i><%- page.categories.data[0].name %></a>
+      </span>
+    <% } %>
+    <% if(page.passwords && page.passwords.length > 0) { %>
+      <span>
+        | <i class="fa fa-lock"></i>LOCK
+      </span>
+    <% } else { %>
+      <span>
+        | <i class="fa fa-unlock-alt"></i>UNLOCK
+      </span>
+    <% } %>
+  </div>
+  <h1 class="post-title">
+    <%- page.title %>
+  </h1>
   <article class="post-article">
     <%- page.more %>
   </article>
+  <% if(page.tags.length > 0) { %>
+    <div class="post-tags">
+    <% for(let tag of page.tags.data) { %> 
+      <a href="<%- url_for(tag.path) %>"><i class="fa fa-tags"></i><%- tag.name %></a>
+    <% } %>
+    </div>
+  <% } %>
 </div>
