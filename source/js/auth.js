@@ -26,5 +26,15 @@
     }
   };
 
+  // print github and demo info
+  console.log(
+    '\n%c Theme-AD v1.0 %c' + 
+    ' 🎉 https://github.com/dongyuanxin/theme-ad 🎉\n' + 
+    '\n%c View demo online %c' + 
+    ' 🔍 https://yuanxin.me/ 🔍  \n' , 
+    'color: #fadfa3; background: #030307; padding:3px 0;', '', 'color: #fadfa3; background: #030307; padding:3px 0;', ''
+  );
+
+  // article password auth
   auth();
 })();
