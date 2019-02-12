@@ -42,5 +42,9 @@
   &-info {
     width: 100%;
     color: $color-blue-grey-1;
+
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
   }
 }

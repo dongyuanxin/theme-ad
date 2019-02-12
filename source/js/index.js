@@ -2,7 +2,8 @@
   const srcs = [
     '/js/copy.js',
     '/js/scroll.js',
-    '/js/backTop.js'
+    '/js/backTop.js',
+    '/js/time.js'
   ];
 
   const loadScript = (src) => {
