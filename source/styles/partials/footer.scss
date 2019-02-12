@@ -11,6 +11,15 @@
   margin: 0 auto;
   font-size: 15px;
 
+  a {
+    color: $color-grey-2;
+    transition: all .15s linear; 
+
+    &:hover {
+      color: white; 
+    }
+  }
+
   &-col {
     display: flex;
     flex-direction: column;
@@ -27,15 +36,6 @@
       display: inline-block;
       margin-bottom: 8px;
       font-weight: bold;
-
-      a {
-        color: $color-grey-2;
-        transition: all .15s linear; 
-
-        &:hover {
-          color: white; 
-        }
-      }
     }
   }
 
