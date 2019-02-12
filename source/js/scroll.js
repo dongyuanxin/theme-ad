@@ -1,5 +1,5 @@
 (() => {
-  const handleScoll = () => {
+  const handleScoll = (() => {
     const process = document.querySelector('#site-process');
     let isRunning = false;
     
@@ -24,7 +24,10 @@
         process.style.width = `${percent}%`;
       });
     };
-  };
+  })();
 
-  document.addEventListener('scroll', handleScoll(), false);
+  // Refresh Page
+  handleScoll();
+
+  document.addEventListener('scroll', handleScoll, false);
 })();
