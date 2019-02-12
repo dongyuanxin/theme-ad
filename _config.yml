@@ -39,7 +39,7 @@ leancloud:
   appid: Hyq9wkH495DgNHWhDQCOfQSp-gzGzoHsz # 填写您的appid
   appkey: WaR7nrzhliHj9aVwdQzkdlGd # 填写您的appkey
   comment: true # 是否开启评论系统
-  timer: true # 是否开启文章统计
+  count: true # 是否开启文章统计
 
 passwords: 
   - abc

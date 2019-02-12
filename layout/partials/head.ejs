@@ -53,6 +53,8 @@
     <link rel="alternate" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
   <% } %>
 
+  <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.11.1/dist/av-min.js" async></script>
+
   <%- partial('components/config') %>
 
   <%- js(['/js/auth.js', '/js/index.js']) %>
