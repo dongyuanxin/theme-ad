@@ -11,11 +11,9 @@
   </div>
   <div class="site-header-right">
     <nav class="site-header-navigation">
-      <a href="/">Home</a>
-      <a href="/archives/">Archive</a>
-      <a href="/tags/">Tag</a>
-      <a href="/friends/">Friend</a>
-      <a href="/about/">About</a>
+      <% for(let link of theme.nav) { %>
+        <a href="<%- link.path %>" target="<%- link.path.startsWith('http') ? '_blank' : '_self' %>"><%= link.name%></a>
+      <% } %>
     </nav>
     <div class="site-header-btn">
       <% if(theme.github) { %>
