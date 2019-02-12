@@ -1,11 +1,4 @@
 (() => {
-  const srcs = [
-    '/js/copy.js',
-    '/js/scroll.js',
-    '/js/backTop.js',
-    '/js/time.js'
-  ];
-
   const loadScript = (src) => {
     let exists = false;
   
@@ -17,6 +10,7 @@
       let script = document.createElement('script');
       script.src = src;
       script.type = 'text/javascript';
+      script.async = 'async';
       script.onerror = (ev) => {
         // 加载失败: 允许外部再次加载
         script.remove();
@@ -31,9 +25,24 @@
     });
   };
 
-  const mapSrcToScript = srcs.map(src => loadScript(src));
+  const documentSrcs = [
+    '/js/copy.js',
+    '/js/scroll.js',
+    '/js/backTop.js',
+    '/js/time.js'
+  ];
+  const windowSrcs = [
+    '/js/leancloud.js'
+  ];
+
+  const documentSrcScripts = documentSrcs.map(src => loadScript(src));
+  const windowSrcScripts = windowSrcs.map(src => loadScript(src));
 
   document.addEventListener('DOMContentLoaded', () => {
-    mapSrcToScript.forEach(script => script());
+    documentSrcScripts.forEach(script => script());
+  });
+
+  window.addEventListener('load', () => {
+    windowSrcScripts.forEach(script => script());
   });
 })();
