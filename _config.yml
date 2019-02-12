@@ -43,3 +43,77 @@ leancloud:
 
 passwords: 
   - abc
+
+nav:
+  -
+    name: "首页"
+    path: "/"
+  -
+    name: "归档"
+    path: "/archives/"
+  -
+    name: "标签"
+    path: "/tags/"
+  -
+    name: "类别"
+    path: "/categories/"
+  -
+    name: "关于"
+    path: "/about/"
+
+footer:
+  - 
+    title: "博客推荐"
+    children:
+      - 
+        name: "GodBMW"
+        path: "https://godbmw.com/"
+      - 
+        name: "阮一峰的个人网站"
+        path: "http://ruanyifeng.com/"
+      -
+        name: "廖雪峰的官方网站"
+        path: "https://www.liaoxuefeng.com/"
+  -
+    title: "系列教程"
+    children:
+      -
+        name: "webpack4系列教程"
+        path: "https://godbmw.com/categories/webpack4%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/"
+      -
+        name: "设计模式手册"
+        path: "https://godbmw.com/design-patterns/"
+      -
+        name: "Leetcode解题报告"
+        path: "https://godbmw.com/leetcode/"
+  -
+    title: "实验室"
+    children:
+      -
+        name: "Music API"
+        path: "https://github.com/dongyuanxin/music-api-next"
+      -
+        name: "Webpack4 Demos"
+        path: "https://github.com/dongyuanxin/webpack-demos"
+      -
+        name: "Theme bmw"
+        path: "https://github.com/dongyuanxin/theme-bmw"
+      -
+        name: "金融情感分析模型"
+        path: "https://github.com/dongyuanxin/news-emotion"
+  -
+    title: "抓到我"
+    children: 
+      -
+        name: "掘金"
+        path: "https://juejin.im/user/5b91fcf06fb9a05d3c7fd4a5"
+      -
+        name: "思否"
+        path: "https://segmentfault.com/"
+      -
+        name: "简书"
+        path: "https://www.jianshu.com/u/d1570f4a618a"
+      -
+        name: "知乎"
+        path: "https://www.zhihu.com/people/godbmw/activities"
+      

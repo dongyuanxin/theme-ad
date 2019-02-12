@@ -1,53 +1,15 @@
 <div class="site-footer-wrapper">
   <footer class="site-footer">
-    <div class="site-footer-col">
-      <h5 class="site-footer-title">友链</h5>
-      <span class="site-footer-item">
-        <a href="https://webflow.com/playlist/popular" target="_blank">Popular</a>
-      </span>
-      <span class="site-footer-item">
-        <a href="https://webflow.com/playlist/popular" target="_blank">New</a>
-      </span>
-      <span class="site-footer-item">
-        <a href="https://webflow.com/playlist/popular" target="_blank">Design</a>
-      </span>
-    </div>
-    <div class="site-footer-col">
-      <h5 class="site-footer-title">友链</h5>
-      <span class="site-footer-item">
-        <a href="https://webflow.com/playlist/popular" target="_blank">Popular</a>
-      </span>
-      <span class="site-footer-item">
-        <a href="https://webflow.com/playlist/popular" target="_blank">New</a>
-      </span>
-      <span class="site-footer-item">
-        <a href="https://webflow.com/playlist/popular" target="_blank">Design</a>
-      </span>
-    </div>
-    <div class="site-footer-col">
-      <h5 class="site-footer-title">友链</h5>
-      <span class="site-footer-item">
-        <a href="https://webflow.com/playlist/popular" target="_blank">Popular</a>
-      </span>
-      <span class="site-footer-item">
-        <a href="https://webflow.com/playlist/popular" target="_blank">New</a>
-      </span>
-      <span class="site-footer-item">
-        <a href="https://webflow.com/playlist/popular" target="_blank">Design</a>
-      </span>
-    </div>
-    <div class="site-footer-col">
-      <h5 class="site-footer-title">友链</h5>
-      <span class="site-footer-item">
-        <a href="https://webflow.com/playlist/popular" target="_blank">Popular</a>
-      </span>
-      <span class="site-footer-item">
-        <a href="https://webflow.com/playlist/popular" target="_blank">New</a>
-      </span>
-      <span class="site-footer-item">
-        <a href="https://webflow.com/playlist/popular" target="_blank">Design</a>
-      </span>
-    </div>
+    <% for(let col of theme.footer) { %>
+      <div class="site-footer-col">
+        <h5 class="site-footer-title"><%= col.title %></h5>
+        <% for(let item of col.children) { %>
+          <span class="site-footer-item">
+            <a href="<%- item.path %>" target="<%- item.path.startsWith('http') ? '_blank' : '_self' %>"><%= item.name %></a>
+          </span>
+        <% } %>
+      </div>
+    <% } %>
     <div class="site-footer-info">
       <i class="fa fa-clock-o"></i> 本站已稳定运行<span id="site-time"></span>
     </div>
