@@ -25,6 +25,7 @@
     passwords: <%- psdArr %>,
     is_post: <%- is_post() %>,
     lock: <%- page.lock === true %>,
-    author: "<%= theme.author || config.author %>"
+    author: "<%= theme.author || config.author %>",
+    share: <%- JSON.stringify(theme.share) %>
   };
 </script>

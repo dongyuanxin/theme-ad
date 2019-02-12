@@ -44,6 +44,13 @@ leancloud:
 passwords: 
   - abc
 
+share:
+  twitter: true
+  facebook: true
+  weibo: true
+  qq: true
+  wechat: true
+
 nav:
   -
     name: "首页"

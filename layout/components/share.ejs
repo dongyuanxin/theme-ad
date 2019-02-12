@@ -1,17 +1,27 @@
 <div class="share-btn">
-  <span class="share-btn-twitter">
-    <i class="fa fa-twitter"></i>
-  </span>
-  <span class="share-btn-google">
-    <i class="fa fa-google"></i>
-  </span>
-  <span class="share-btn-weibo">
-    <i class="fa fa-weibo"></i>
-  </span>
-  <span class="share-btn-qq">
-    <i class="fa fa-qq"></i>
-  </span>
-  <span class="share-btn-wechat">
-    <i class="fa fa-wechat"></i>
-  </span>
+  <% if(theme.share.twitter === true) { %>
+    <a class="share-btn-twitter">
+      <i class="fa fa-twitter"></i>
+    </a>
+  <% } %>
+  <% if(theme.share.facebook === true) { %>
+    <a class="share-btn-facebook">
+      <i class="fa fa-facebook"></i>
+    </a>
+  <% } %>
+  <% if(theme.share.weibo === true) { %>
+    <a class="share-btn-weibo">
+      <i class="fa fa-weibo"></i>
+    </a>
+  <% } %>
+  <% if(theme.share.qq === true) { %>
+    <a class="share-btn-qq">
+      <i class="fa fa-qq"></i>
+    </a>
+  <% } %>
+  <% if(theme.share.wechat === true) { %>
+    <a class="share-btn-wechat">
+      <i class="fa fa-wechat"></i>
+    </a>
+  <% } %>
 </div>
