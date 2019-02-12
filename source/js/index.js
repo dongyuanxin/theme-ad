@@ -1,5 +1,6 @@
 (() => {
   const srcs = [
+    '/js/copy.js',
     '/js/scroll.js',
     '/js/backTop.js'
   ];

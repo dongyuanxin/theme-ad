@@ -24,6 +24,7 @@
     start_time: "<%- theme.start_time %>",
     passwords: <%- psdArr %>,
     is_post: <%- is_post() %>,
-    lock: <%- page.lock === true %>
+    lock: <%- page.lock === true %>,
+    author: "<%= theme.author || config.author %>"
   };
 </script>
