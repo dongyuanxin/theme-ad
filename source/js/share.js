@@ -61,4 +61,37 @@
       .setAttribute('href', mapSocialToUrl[social]);
   }
 
+  if(!socials.includes('wechat')) {
+    return;
+  }
+
+  // wechat share by qrcode
+  document.querySelector('#share-btn-wechat').addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+
+    const layer = document.querySelector('#site-layer'),
+      container = document.querySelector('#site-layer-container'),
+      title = document.querySelector('#site-layer-title'),
+      newDOM = document.createElement('div');
+
+    layer.style.display = 'block';
+    title.innerHTML = '微信分享';
+    container.appendChild(newDOM);
+
+    const qrcode = new QRCode(newDOM, {
+      text: `${window.location.origin}${window.location.pathname}`,
+      width: 256,
+      height: 256,
+      colorDark: "#000000",
+      colorLight: "#ffffff",
+      correctLevel : QRCode.CorrectLevel.H
+    });
+
+    window.AD_CONFIG.layer.add(() => {
+      title.innerHTML = '';
+      qrcode.clear();
+      newDOM.remove();
+    });
+  });
 })();
