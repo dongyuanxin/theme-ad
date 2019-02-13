@@ -27,13 +27,14 @@
 
   const documentSrcs = [
     '/js/copy.js',
+    '/js/layer.js',
     '/js/scroll.js',
     '/js/backTop.js',
-    '/js/time.js',
-    '/js/share.js'
+    '/js/time.js'
   ];
   const windowSrcs = [
-    '/js/leancloud.js'
+    '/js/leancloud.js',
+    '/js/share.js'
   ];
 
   const documentSrcScripts = documentSrcs.map(src => loadScript(src));
