@@ -29,7 +29,8 @@
     '/js/copy.js',
     '/js/scroll.js',
     '/js/backTop.js',
-    '/js/time.js'
+    '/js/time.js',
+    '/js/share.js'
   ];
   const windowSrcs = [
     '/js/leancloud.js'

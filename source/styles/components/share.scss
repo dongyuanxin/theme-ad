@@ -1,4 +1,4 @@
-.share-btn {
+#share-btn {
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -26,40 +26,38 @@
     }
   }
 
-  .share-btn {
-    &-qq {
-      background: $color-blue-6;
-      &:hover {
-        background: $color-blue-4;
-      }
+  &-qq {
+    background: $color-blue-6;
+    &:hover {
+      background: $color-blue-4;
     }
+  }
 
-    &-wechat {
-      background: $color-green-5;
-      &:hover {
-        background: $color-green-3;
-      }
+  &-wechat {
+    background: $color-green-5;
+    &:hover {
+      background: $color-green-3;
     }
+  }
 
-    &-twitter {
-      background: $color-light-blue-5;
-      &:hover {
-        background: $color-light-blue-3;
-      }
+  &-twitter {
+    background: $color-light-blue-5;
+    &:hover {
+      background: $color-light-blue-3;
     }
+  }
 
-    &-facebook {
-      background: $color-indigo-4;
-      &:hover {
-        background: $color-indigo-3;
-      }
+  &-facebook {
+    background: $color-indigo-4;
+    &:hover {
+      background: $color-indigo-3;
     }
+  }
 
-    &-weibo {
-      background: $color-red-4;
-      &:hover {
-        background: $color-red-3;
-      }
+  &-weibo {
+    background: $color-red-4;
+    &:hover {
+      background: $color-red-3;
     }
   }
 }
