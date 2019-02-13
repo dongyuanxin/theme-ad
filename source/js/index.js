@@ -34,7 +34,8 @@
   ];
   const windowSrcs = [
     '/js/leancloud.js',
-    '/js/share.js'
+    '/js/share.js',
+    '/js/search.js'
   ];
 
   const documentSrcScripts = documentSrcs.map(src => loadScript(src));
