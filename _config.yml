@@ -44,7 +44,7 @@ leancloud:
   count: true # 是否开启文章统计
 
 passwords: 
-  - abc
+  - "b56888a08f3d2405dd37dba14af086c53fc7ed262bd33f1cabc87b2ad9343b69"
 
 share:
   twitter: true

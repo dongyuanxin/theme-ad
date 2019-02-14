@@ -16,6 +16,7 @@
     }
 
     password = prompt('输入您的名称小写全拼 (例如: 李三 => lisan)');
+    password = sha256(password);
 
     if(passwords.includes(password)) {
       expires = now + day * 3;
