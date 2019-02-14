@@ -53,6 +53,14 @@ share:
   qq: true
   wechat: true
 
+reward:
+  -
+    src: "https://godbmw.com/images/wechat.png"
+    alt: "WeChat"
+  -
+    src: "https://godbmw.com/images/alipay.png"
+    alt: "AliPay"
+
 nav:
   -
     name: "首页"

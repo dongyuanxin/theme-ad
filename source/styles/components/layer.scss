@@ -95,4 +95,25 @@
       }
     }
   }
+
+  &-reward {
+    width: 100%;
+    overflow: auto;
+
+    div {
+      width: 100%;
+      padding: 10px calc(50% - 128px);
+      text-align: center;
+
+      img {
+        width: 256px;
+        height: 256px;
+      }
+
+      p {
+        font-size: 18px;
+        margin: 10px 0;
+      }
+    }
+  }
 }

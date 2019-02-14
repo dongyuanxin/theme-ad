@@ -1,4 +1,31 @@
 (() => {
+  window.AD_CONFIG.layer = (() => {
+    let cbs = [];
+    
+    return {
+      add: (cb) => {
+        if(cbs.includes(cb)) {
+          return false;
+        }
+        cbs.push(cb);
+        return true;
+      },
+      remove: (cb) => {
+        let index = cbs.indexOf(cb);
+        if(index === -1) {
+          return false;
+        }
+        cbs.splice(index, 1);
+        return true;
+      },
+      // trigger before layer to be closed
+      trigger: () => {
+        cbs.forEach(cb => cb());
+        cbs = [];
+      }
+    }
+  })();
+
   const loadScript = (src) => {
     let exists = false;
   
@@ -30,12 +57,13 @@
     '/js/layer.js',
     '/js/scroll.js',
     '/js/backTop.js',
-    '/js/time.js'
+    '/js/time.js',
+    '/js/search.js'
   ];
   const windowSrcs = [
     '/js/leancloud.js',
     '/js/share.js',
-    '/js/search.js'
+    '/js/reward.js'
   ];
 
   const documentSrcScripts = documentSrcs.map(src => loadScript(src));

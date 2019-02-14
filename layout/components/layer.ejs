@@ -9,6 +9,16 @@
         <input type="text">
         <i class="fa fa-search"></i>
       </div>
+      <div class="site-layer-reward" id="site-layer-reward" style="display: none;">
+        <% for(let reward of theme.reward) { %>
+          <div>
+            <img src="<%- reward.src %>" alt="<%= reward.alt %>">
+            <% if(reward.alt.length > 0) { %>
+              <p><%= reward.alt %></p>
+            <% } %>
+          </div>
+        <% } %>
+      </div>
     </div>
   </div>
 </div>
