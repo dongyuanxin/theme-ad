@@ -63,7 +63,7 @@
   const windowSrcs = [
     '/js/leancloud.js',
     '/js/share.js',
-    '/js/reward.js'
+    '/js/reward.js',
   ];
 
   const documentSrcScripts = documentSrcs.map(src => loadScript(src));

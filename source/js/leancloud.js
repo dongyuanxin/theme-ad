@@ -1,6 +1,44 @@
 (() => {
   const { leancloud } = window.AD_CONFIG;
 
+  function getPsgID(pathname) {
+    if(!pathname) {
+      pathname = window.location.pathname;
+    }
+
+    let names = pathname.split('/');
+    for(let i = names.length - 1; i >= 0; --i) {
+      let name = names[i].trim();
+      if(name.length > 0 && name !== '/' && name !== 'index.html') {
+        return name;
+      }
+    }
+    return '/';
+  }
+
+  function _updateCommentNum() {
+    const infoDOM = document.querySelector('#site-comment-info'),
+      url = getPsgID(),
+      _ts = 1000;
+    let running = false;
+
+    return (ts = _ts) => {
+      if(running) {
+        return;
+      }
+      setTimeout(() => {
+        running = true;
+        let query = new AV.Query('Comment');
+        query.equalTo('url', url);
+        query.count()
+          .then(num => {
+            infoDOM.innerHTML = `共${num}条评论`;
+            running = false;
+          });
+      }, ts);
+    }
+  }
+
   function active() {
     if(leancloud.comment === false && leancloud.count === false) {
       return false;
@@ -65,6 +103,29 @@
   }
 
   if(leancloud.comment === true) {
-    // TODO
+    const commentDOM = document.querySelector('#site-comment');
+    if(!commentDOM) {
+      return;
+    }
+
+    const updateCommentNum = _updateCommentNum();
+    updateCommentNum(0);
+
+    new Valine({
+      el: '#site-comment',
+      appId: leancloud.appid,
+      appKey: leancloud.appkey,
+      notify: false,
+      verify: false,
+      avatar: "robohash",
+      placeholder: "正确填写邮箱, 才能及时收到回复哦♪(^∇^*)",
+      path: getPsgID()
+    });
+
+    document.querySelector('.vsubmit.vbtn').addEventListener('click', (e) => {
+      e.stopPropagation();
+      e.preventDefault();
+      updateCommentNum(1000);
+    });
   }
 })();
