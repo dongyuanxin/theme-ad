@@ -2,9 +2,13 @@
   background: white;
   padding-top: 30px;
 
-  #site-comment-info {
-    max-width: 1024px;
+  %block-size {
+    max-width: $main-width;
     margin: 0 auto;
+  }
+
+  #site-comment-info {
+    @extend %block-size;
     padding: 5px;
     line-height: 2;
     font-size: 16px;
@@ -12,8 +16,7 @@
   }
 
   #site-comment {
-    max-width: 1024px;
-    margin: 0 auto;
+    @extend %block-size;
     padding-bottom: 20px;
 
     .vinfo .vcount {
