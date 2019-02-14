@@ -6,6 +6,9 @@
     <main>
       <%- body %>
     </main>
+    <% if(is_post()) { %>
+      <%- partial('components/comment') %>
+    <% } %>
     <%- partial('partials/footer') %>
     <%- partial('components/layer') %>
     <%- partial('components/bottom-bar') %>

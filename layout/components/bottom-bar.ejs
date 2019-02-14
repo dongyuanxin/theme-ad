@@ -1,5 +1,5 @@
 <%
-  let next = {}, prev = {}, catalog, comments;
+  let next = {}, prev = {}, catalog = false, comments = false;
   if(is_home()) {
     prev.link = url_for(page.prev_link);
     next.link = url_for(page.next_link);
@@ -7,8 +7,6 @@
     next.enable = !is_current(next.link);
     !prev.enable && (prev.link = 'javascript:void(0);');
     !next.enable && (next.link = 'javascript:void(0);');
-    catalog = false;
-    comments = false;
   } else if (is_post()) {
     prev.link = page.prev ? url_for(page.prev.path) : 'javascript:void(0);';
     prev.enable = !!page.prev;
@@ -32,7 +30,7 @@
     <a href="javascript:void(0);" data-enable="<%- catalog %>">
       <i class="fa fa-bars"></i>
     </a>
-    <a href="javascript:void(0);" data-enable="<%- comments %>">
+    <a href="<%- comments ? '#site-comment' : 'javascript:void(0);'%>" data-enable="<%- comments %>">
       <i class="fa fa-commenting"></i>
     </a>
     <a href="javascript:void(0);" id="site-reward">

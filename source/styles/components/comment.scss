@@ -1,0 +1,24 @@
+.site-comment-contanier {
+  background: white;
+  padding-top: 30px;
+
+  #site-comment-info {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 5px;
+    line-height: 2;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  #site-comment {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+
+    .vinfo .vcount {
+      display: none !important;
+    }
+  }
+}
+
