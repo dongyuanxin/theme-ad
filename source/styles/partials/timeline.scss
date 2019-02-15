@@ -1,0 +1,86 @@
+.timeline {
+  display: block;
+  max-width: 700px;
+  margin: 30px auto;
+  padding-left: 30px;
+  border-left: 3px solid $color-blue-grey-2;
+
+  %before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-style: solid;
+    border-color: $color-blue-grey-2;
+    border-radius: 50%;
+    background: white;
+    content: "";
+    transition: all .3s ease;
+  }
+
+  &-title, &-subtitle, &-item {
+    position: relative;
+    margin-bottom: 20px;
+    height: 32px;
+    line-height: 32px;
+
+    &:hover {
+      &::before {
+        border-color: $color-deep-orange-6;
+      }
+
+      a {
+        color: $color-deep-orange-6;
+      }
+    }
+  }
+
+  &-title {
+    font-size: 28px;
+
+    &::before {
+      @extend %before;
+      width: 12px;
+      height: 12px;
+      border-width: 3px;
+      left: -40px;
+    }
+  }
+
+  &-subtitle {
+    font-weight: normal;
+    font-size: 22px;
+
+    &::before {
+      @extend %before;
+      width: 10px;
+      height: 10px;
+      border-width: 3px;
+      left: -39px;
+    }
+  }
+
+  &-item {
+    font-family: Lato, Helvetica Neue For Number, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif;
+
+    time {
+      display: inline-block;
+      margin-right: 25px;
+      font-weight: 300;
+      color: $color-grey-7;
+    }
+
+    a {
+      color: $color-grey-9;
+      font-weight: 500;
+      transition: all .3s ease;
+    }
+
+    &::before {
+      @extend %before;
+      width: 9px;
+      height: 9px;
+      border-width: 2px;
+      left: -38px;
+    }
+  }
+}
