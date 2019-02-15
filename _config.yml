@@ -72,7 +72,7 @@ nav:
     name: "标签"
     path: "/tags/"
   -
-    name: "类别"
+    name: "分类"
     path: "/categories/"
   -
     name: "关于"
