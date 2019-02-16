@@ -11,27 +11,24 @@
     };
 
   if(is_home()) {
-    prev.link = url_for(page.prev_link);
-    next.link = url_for(page.next_link);
-    prev.enable = !is_current(prev.link);
-    next.enable = !is_current(next.link);
-    !prev.enable && (prev.link = 'javascript:void(0);');
-    !next.enable && (next.link = 'javascript:void(0);');
+    prev.enable = page.current !== 1;
+    prev.link = prev.enable ? url_for(page.prev_link) : 'javascript:void(0);';
+    next.enable = page.current !== page.total;
+    next.link = next.enable ? url_for(page.next_link) : 'javascript:void(0);';
   } else if (is_post()) {
     prev.link = page.prev ? url_for(page.prev.path) : 'javascript:void(0);';
     prev.enable = !!page.prev;
     next.link = page.next ? url_for(page.next.path) : 'javascript:void(0);';
     next.enable = !!page.next;
     catalog = true;
-    comments = true;
-  } else if (is_archive() || is_post() || is_category()) {
+  } else if (is_archive() || is_tag() || is_category()) {
     prev.link = page.prev_link ? url_for(page.prev_link) : 'javascript:void(0);';
     prev.enable = !!page.prev_link;
     next.link = page.next_link ? url_for(page.next_link) : 'javascript:void(0);';
     next.enable = !!page.next_link;
-  } else if (page.type === 'about') {
-    comments = true;
-  } else if (page.type === 'friends') {
+  } 
+  
+  if (is_post() || page.type === 'about' || page.type === 'friends') {
     comments = true;
   }
 %>
@@ -49,9 +46,11 @@
     <a href="javascript:void(0);" data-enable="<%- catalog %>">
       <i class="fa fa-bars"></i>
     </a>
-    <a href="<%- comments ? '#site-comment' : 'javascript:void(0);'%>" data-enable="<%- comments %>">
-      <i class="fa fa-commenting"></i>
-    </a>
+    <% if(theme.leancloud.comment) { %>
+      <a href="<%- comments ? '#site-comment' : 'javascript:void(0);'%>" data-enable="<%- comments %>">
+        <i class="fa fa-commenting"></i>
+      </a>
+    <% } %>
     <a href="javascript:void(0);" id="site-toggle-share-btn">
       <i class="fa fa-share-alt"></i>
     </a>
