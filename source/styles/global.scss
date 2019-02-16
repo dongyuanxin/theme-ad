@@ -37,6 +37,14 @@ main {
   padding-top: $header-height;
   min-height: calc(100vh - #{$bottom-bar-height});
   max-width: $main-width;
+
+  @media screen and (max-width: $mobile-width) {
+    margin: 0 20px;
+  }
+
+  @media screen and (min-width: $mobile-width + 1px) and (max-width: $main-width) {
+    margin: 0 50px;
+  }
 }
 
 .clearfix {

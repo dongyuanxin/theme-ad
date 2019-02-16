@@ -215,6 +215,7 @@
 
   &-tags {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     margin-top: 20px;
     padding-top: 20px;
@@ -223,7 +224,7 @@
 
     a {
       display: inline-flex;
-      margin-right: 15px;
+      margin: 0 15px 15px 0;
       align-items: center;
       height: 30px;
       padding: 5px 10px;

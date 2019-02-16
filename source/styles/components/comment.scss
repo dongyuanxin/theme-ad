@@ -7,6 +7,14 @@
     margin: 0 auto;
   }
 
+  @media screen and (max-width: $mobile-width) {
+    padding: 30px 20px 0;
+  }
+
+  @media screen and (min-width: $mobile-width + 1px) and (max-width: $main-width) {
+    padding: 30px 50px 0;
+  }
+
   #site-comment-info {
     @extend %block-size;
     padding: 5px;

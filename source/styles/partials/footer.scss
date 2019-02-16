@@ -11,6 +11,14 @@
   margin: 0 auto;
   font-size: 15px;
 
+  @media screen and (max-width: $mobile-width) {
+    padding: 30px 20px 30px;
+  }
+
+  @media screen and (min-width: $mobile-width + 1px) and (max-width: $main-width) {
+    padding: 30px 50px 30px;
+  }
+
   a {
     color: $color-grey-2;
     transition: all .15s linear; 
@@ -25,6 +33,10 @@
     flex-direction: column;
     padding-bottom: 30px;
     width: 33.33333%;
+
+    @media screen and (max-width: $mobile-width) {
+      width: 50%;
+    }
 
     h5 {
       margin-bottom: 15px;

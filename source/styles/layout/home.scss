@@ -18,6 +18,10 @@
     transition: all .3s ease;
     z-index: -1;
 
+    @media screen and (max-width: $main-width) {
+      display: none;
+    }
+
     &:hover {
       z-index: 100;
       width: calc(50% + 30px);
@@ -35,14 +39,15 @@
     transition: all .3s ease;
     background: white;
     width: 100%;
-    padding: 60px;
+    padding: 60px 60px 40px;
     border-radius: $border-radius-size;
 
-    &[data-cover=true] {
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
+    @media screen and (max-width: $mobile-width) {
+      padding: 20px 15px;
+    }
 
-      &:hover {
+    &[data-cover=true]:hover {
+      @media screen and (min-width: $main-width + 1px) {
         z-index: 100;
         // 防止内容换行
         padding-left: 80px;
@@ -63,6 +68,10 @@
 
     &[data-cover=true] {
       padding-right: 50%;
+
+      @media screen and (max-width: $main-width) {
+        padding: 0;
+      }
     }
 
     &-title {
