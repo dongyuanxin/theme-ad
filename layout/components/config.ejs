@@ -23,9 +23,10 @@
     leancloud: <%- JSON.stringify(theme.leancloud) %>,
     start_time: "<%- theme.start_time %>",
     passwords: <%- psdArr %>,
-    is_post: <%- is_post() %>,
-    lock: <%- page.lock === true %>,
+    is_post: <%- !!is_post() %>,
+    lock: <%- !!page.lock %>,
     author: "<%= theme.author || config.author %>",
-    share: <%- JSON.stringify(theme.share) %>
+    share: <%- JSON.stringify(theme.share) %>,
+    mathjax: <%- !!theme.mathjax %>
   };
 </script>

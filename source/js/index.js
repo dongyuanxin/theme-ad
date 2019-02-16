@@ -52,6 +52,7 @@
     });
   };
 
+  // load after DOM built
   const documentSrcs = [
     '/js/copy.js',
     '/js/layer.js',
@@ -60,10 +61,13 @@
     '/js/time.js',
     '/js/search.js'
   ];
+
+  // load after all srcs loaded
   const windowSrcs = [
     '/js/leancloud.js',
     '/js/share.js',
     '/js/reward.js',
+    '/js/mathjax.js'
   ];
 
   const documentSrcScripts = documentSrcs.map(src => loadScript(src));

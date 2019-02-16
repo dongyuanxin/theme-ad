@@ -54,7 +54,14 @@
   <% } %>
 
   <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.11.1/dist/av-min.js" async></script>
-  <script src="//unpkg.com/valine/dist/Valine.min.js" async></script>
+
+  <% if(theme.mathjax) { %>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+  <% } %>
+
+  <% if(theme.leancloud.comment) { %>
+    <script src="//unpkg.com/valine/dist/Valine.min.js" async></script>
+  <% } %>
 
   <%- partial('components/config') %>
 

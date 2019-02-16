@@ -26,6 +26,9 @@ custom_style:
 # 代码高亮主题
 highlight_theme: "night eighties"
 
+# 开启数学公式渲染
+mathjax: true
+
 # 建站时间. 格式：YYYY-MM-DD
 start_time: "2018-02-10"
 
@@ -49,7 +52,7 @@ share:
 
 analytics:
   baidu:
-    enable: true
+    enable: false
   google:
     enable: false
     id: 
