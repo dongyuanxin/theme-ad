@@ -1,5 +1,15 @@
 <%
-  let next = {}, prev = {}, catalog = false, comments = false;
+  let catalog = false, 
+    comments = false,
+    next = {
+      link: 'javascript:void(0);',
+      enable: false
+    }, 
+    prev = {
+      link: 'javascript:void(0);',
+      enable: false
+    };
+
   if(is_home()) {
     prev.link = url_for(page.prev_link);
     next.link = url_for(page.next_link);
@@ -13,6 +23,15 @@
     next.link = page.next ? url_for(page.next.path) : 'javascript:void(0);';
     next.enable = !!page.next;
     catalog = true;
+    comments = true;
+  } else if (is_archive() || is_post() || is_category()) {
+    prev.link = page.prev_link ? url_for(page.prev_link) : 'javascript:void(0);';
+    prev.enable = !!page.prev_link;
+    next.link = page.next_link ? url_for(page.next_link) : 'javascript:void(0);';
+    next.enable = !!page.next_link;
+  } else if (page.type === 'about') {
+    comments = true;
+  } else if (page.type === 'friends') {
     comments = true;
   }
 %>
