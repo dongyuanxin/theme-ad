@@ -179,6 +179,10 @@
     padding-bottom: 50%;
     margin-bottom: 40px;
 
+    @media screen and (max-width: $mobile-width) {
+      display: none;
+    }
+
     figure {
       position: absolute;
       left: 0px;
