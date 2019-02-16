@@ -7,6 +7,10 @@
   transform: translateY(-50%);
   z-index: 300;
 
+  @media screen and (max-width: $mobile-width) {
+    display: none;
+  }
+
   a {
     display: inline-block;
     cursor: pointer;

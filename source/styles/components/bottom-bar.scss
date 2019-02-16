@@ -41,44 +41,9 @@
     }
   }
 
-  span {
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-    transition: all .15s linear;
-
-    a {
-      display: inline-block;
-      color: $color-blue-4;
-      width: 40px;
-      height: 40px;
-    }
-
-    &:hover {
-      border-radius: 50%;
-      color: white;
-      a {
-        color: white;
-      }
-    }
-
-    &[data-enable="false"] {
-      cursor: not-allowed;
-      &:hover {
-        background: $color-blue-2;
-        a {
-          cursor: not-allowed;
-        }
-      }
-    }
-
-    &[data-enable="true"] {
-      color: $color-blue-4;
-      cursor: pointer;
-      &:hover {
-        background: $color-blue-4;
-      }
+  #site-toggle-share-btn {
+    @media screen and (min-width: $mobile-width + 1px) {
+      display: none;
     }
   }
 }

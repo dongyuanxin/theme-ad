@@ -8,6 +8,18 @@
     return str.slice(0, str.length - 1);
   }
 
+  function toggleShareBtn() {
+    let show = false;
+    const shareBtnDOM = document.querySelector('#share-btn');
+
+    return (e) => {
+      e.stopPropagation();
+      e.preventDefault();
+      show = !show;
+      shareBtnDOM.style.display = show ? 'flex' : 'none';
+    };
+  }
+
   const mapSocialToUrl = (() => {
     const baseUrls = {
       twitter: 'https://twitter.com/intent/tweet',
@@ -94,4 +106,9 @@
       newDOM.remove();
     });
   });
+
+  // control btn panel if show in mobile phone
+  if(socials.length > 0) {
+    document.querySelector('#site-toggle-share-btn').addEventListener('click', toggleShareBtn());
+  }
 })();
