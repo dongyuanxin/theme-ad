@@ -2,7 +2,7 @@ author: Dong Yuanxin
 
 keywords: Hexo, theme-bmw
 
-description: 董沅鑫的个人小站
+description: 董沅鑫的小站
 
 # 导航栏头部名称
 nav_name: YuanXin
@@ -23,14 +23,8 @@ rss:
 # 自定义样式文件位置
 custom_style: 
 
-# 更多细节请参考 demo: https://github.com/dongyuanxin/theme-bmw/blob/master/demo._config.yml
+# 代码高亮主题
 highlight_theme: "night eighties"
-
-# 是否开启 分享功能: https://github.com/overtrue/share.js
-social_share:
-  enable: true
-  sites: qzone, qq, weibo, wechat, douban, google, facebook, twitter
-  disabled: 
 
 # 建站时间. 格式：YYYY-MM-DD
 start_time: "2018-02-10"
@@ -52,6 +46,13 @@ share:
   weibo: true
   qq: true
   wechat: true
+
+analytics:
+  baidu:
+    enable: true
+  google:
+    enable: false
+    id: 
 
 reward:
   -

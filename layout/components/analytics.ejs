@@ -1,0 +1,27 @@
+<% if(theme.analytics.google.enable) { %>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=<%= theme.analytics.google.id %>"></script>
+  <script async>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', '<%= theme.analytics.google.id %>');
+  </script>
+<% } %>
+
+<% if(theme.analytics.baidu.enable) { %>
+  <script async>
+  (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();
+  </script>
+<% } %>
