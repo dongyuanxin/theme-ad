@@ -6,7 +6,7 @@
     <main>
       <%- body %>
     </main>
-    <% if(is_post() || page.type === 'about') { %>
+    <% if(is_post() || page.type === 'about' || page.type === 'friends') { %>
       <%- partial('components/comment') %>
     <% } %>
     <%- partial('partials/footer') %>

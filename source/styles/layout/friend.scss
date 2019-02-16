@@ -6,10 +6,12 @@
     border-top-right-radius: 5px;
   }
 
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  margin: 10px 0;
+  &-card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 10px 0;
+  }
 
   &-card {
     width: $img-size;
@@ -77,5 +79,9 @@
         }
       }
     }
+  }
+
+  article {
+    margin-bottom: 30px;
   }
 }

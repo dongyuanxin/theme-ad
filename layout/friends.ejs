@@ -1,23 +1,25 @@
 <div class="friend">
-  <% 
-    const re = /(?:\w+\.)+\w+/;
-    if(Array.isArray(theme.friends)) {
-      for(let friend of theme.friends) { 
-  %>
-      <div class="friend-card">
-        <div class="friend-card-layer">
-          <div class="friend-card-meta">
-            <p><%= friend.meta %></p>
+  <% if(Array.isArray(theme.friends) && theme.friends.length > 0) { %>
+    <div class="friend-card-container">
+      <% for(let friend of theme.friends) { %>
+        <div class="friend-card">
+          <div class="friend-card-layer">
+            <div class="friend-card-meta">
+              <p><%= friend.meta %></p>
+            </div>
+            <img class="friend-card-avatar" src="<%- friend.avatar %>"/>
           </div>
-          <img class="friend-card-avatar" src="<%- friend.avatar %>"/>
+          <div class="friend-card-content">
+            <div class="friend-card-content-title"><%= friend.nickname %></div>
+            <a href="<%- friend.site %>" target="_blank" class="friend-card-content-site">
+              <%= friend.site.match(/(?:\w+\.)+\w+/)[0] %>
+            </a>
+          </div>
         </div>
-        <div class="friend-card-content">
-          <div class="friend-card-content-title"><%= friend.nickname %></div>
-          <a href="<%- friend.site %>" target="_blank" class="friend-card-content-site"><%= friend.site.match(re)[0] %></a>
-        </div>
-      </div>
-  <% 
-      } 
-    } 
-  %>
+      <% } %>
+    </div>
+  <% } %>
+  <article class="passage-article">
+    <%- page.content %>
+  </article>
 </div>
