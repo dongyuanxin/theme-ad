@@ -136,4 +136,12 @@ footer:
       -
         name: "知乎"
         path: "https://www.zhihu.com/people/godbmw/activities"
-      
+
+friends_avatar_cdn: 
+friends:
+  -
+    nickname: GodBMW
+    avatar: /images/friends/godbmw.jpeg
+    site: https://godbmw.com
+    meta: 我自己♪(^∇^*)
+    show: true

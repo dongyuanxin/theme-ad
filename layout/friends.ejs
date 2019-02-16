@@ -1,13 +1,21 @@
 <div class="friend">
-  <% if(Array.isArray(theme.friends) && theme.friends.length > 0) { %>
+  <% 
+    if(Array.isArray(theme.friends) && theme.friends.length > 0) { 
+      const cdn = theme.friends_avatar_cdn || '';
+  %>
     <div class="friend-card-container">
       <% for(let friend of theme.friends) { %>
+        <%
+          if(friend.show === false) {
+            continue;
+          }
+        %>
         <div class="friend-card">
           <div class="friend-card-layer">
             <div class="friend-card-meta">
               <p><%= friend.meta %></p>
             </div>
-            <img class="friend-card-avatar" src="<%- friend.avatar %>"/>
+            <img class="friend-card-avatar" src="<%- cdn + friend.avatar %>"/>
           </div>
           <div class="friend-card-content">
             <div class="friend-card-content-title"><%= friend.nickname %></div>
