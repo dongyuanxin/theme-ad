@@ -75,6 +75,9 @@ nav:
     name: "分类"
     path: "/categories/"
   -
+    name: "友链"
+    path: "/friends/"
+  -
     name: "关于"
     path: "/about/"
 
