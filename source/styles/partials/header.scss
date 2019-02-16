@@ -14,7 +14,6 @@
   &-brand, &-right {
     display: flex;
     align-items: center;
-    justify-content: space-between;
   }
 
   &-brand {
@@ -35,8 +34,11 @@
   }
 
   &-right {
-    width: 100%;
-    overflow: auto;
+    justify-content: flex-end;
+    @media screen and (max-width: $mobile-width) {
+      width: 100%;
+      overflow: auto;
+    }
   }
 
   &-navigation {
