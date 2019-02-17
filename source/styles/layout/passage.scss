@@ -111,7 +111,9 @@
 
     img {
       display: inline-block;
-      width: 100%;
+      margin-top: 10px;
+      margin-right: 20px;
+      max-width: 100%;
       border-radius: 10px;
       border: 1px solid $color-grey-2;
       cursor: pointer;
