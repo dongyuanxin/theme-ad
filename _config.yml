@@ -40,8 +40,10 @@ leancloud:
   comment: true # 是否开启评论系统
   count: true # 是否开启文章统计
 
+# 存放sha256加密的密码
+# 拥有所有加锁文章的阅读权限
 passwords: 
-  - "b56888a08f3d2405dd37dba14af086c53fc7ed262bd33f1cabc87b2ad9343b69"
+  - 9fd4703ff67642ec7fc0f8616d7513e620263fa6f3758b5836f496dfe334ae34 # dongyuanxin
 
 share:
   twitter: true
@@ -59,10 +61,10 @@ analytics:
 
 reward:
   -
-    src: "https://godbmw.com/images/wechat.png"
+    src: /images/wechat.png
     alt: "WeChat"
   -
-    src: "https://godbmw.com/images/alipay.png"
+    src: /images/alipay.png
     alt: "AliPay"
 
 nav:
