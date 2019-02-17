@@ -60,6 +60,10 @@
   .category-list-item {
     width: 50%;
     margin: 5px 0;
+
+    @media screen and (max-width: $mobile-width) {
+      width: 100%;
+    }
   }
 
   .tag-list-item {
