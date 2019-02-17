@@ -12,7 +12,7 @@
                 | <a href="<%- url_for(psg.categories.data[0].path) %>"><i class="fa fa-bookmark"></i><%- psg.categories.data[0].name %></a>
               </span>
             <% } %>
-            <% if(psg.passwords && psg.passwords.length > 0) { %>
+            <% if(psg.lock === true) { %>
               <span>
                 | <i class="fa fa-lock"></i>LOCK
               </span>
