@@ -17,18 +17,20 @@
       title = '分类: ' + page.category;
     } else if (is_tag()){
       title = '标签: ' + page.tag;
-    } else if (title === "about") {
+    } else if (page.type === "about") {
       title = "关于"
-    } else if (title === "tags") {
+    } else if (page.type === "tags") {
       title = "标签"
-    } else if (title === "categories") {
+    } else if (page.type === "categories") {
       title = "分类"
-    } else if (title === "friends") {
+    } else if (page.type === "friends") {
       title = "友链"
     }
+
+    title = title ? `${title} | ${config.title}` : config.title;
   %>
   
-  <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
+  <title><%= title %></title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
