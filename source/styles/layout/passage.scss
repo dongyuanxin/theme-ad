@@ -172,6 +172,11 @@
     font-size: 36px;
     line-height: 42px;
     margin: 25px 0 40px;
+
+    @media screen and (max-width: $mobile-width) {
+      font-size: 30px;
+      margin-bottom: 25px;
+    }
   }
 
   &-cover {

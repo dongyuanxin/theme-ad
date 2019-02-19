@@ -20,6 +20,10 @@
     &-title {
       font-weight: bold;
       font-size: 24px;
+
+      @media screen and (max-width: $mobile-width) {
+        font-size: 22px;
+      }
     }
     &-motto {
       display: inline-block;
