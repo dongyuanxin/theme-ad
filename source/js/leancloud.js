@@ -1,5 +1,6 @@
 (() => {
   const { leancloud } = window.AD_CONFIG;
+  let totalVisit = 0;
 
   function getPsgID(pathname) {
     if(!pathname) {
@@ -89,6 +90,45 @@
     });
   }
 
+  function showWelcome() {
+    const day = 60 * 60 * 24 * 1000;
+    const layer = document.querySelector('#site-layer'),
+      welcome = document.querySelector('#site-layer-welcome'),
+      title = document.querySelector('#site-layer-title');
+  
+    let visitTime = parseInt(atob(window.localStorage.getItem('visit_time')), 10),
+      now = Date.now(),
+      offsetDays = 0;
+    
+    window.localStorage.setItem('visit_time', btoa(now.toString()));
+    
+    if(layer.style.display !== 'none' || !totalVisit) {
+      return;
+    }
+
+    offsetDays = Math.ceil((now - visitTime) / day);
+  
+    if(isNaN(offsetDays)) {
+      layer.style.display = 'block';
+      title.innerHTML = '欢迎到来';
+      welcome.innerHTML = `您是本站的第${totalVisit}位访问者`;
+      welcome.style.display = 'flex';
+    } else if (offsetDays >= 30) {
+      layer.style.display = 'block';
+      title.innerHTML = '欢迎回来';
+      welcome.innerHTML = '您很久没来小站看看啦';
+      welcome.style.display = 'flex';
+    } else {
+      return;
+    }
+  
+    window.AD_CONFIG.layer.add(() => {
+      title.innerHTML = '';
+      welcome.innerHTML = '';
+      welcome.style.display = 'none';
+    });
+  }
+
   if(!active()) {
     return;
   }
@@ -98,7 +138,11 @@
   }
 
   if(leancloud.count === true) {
-    count().then(res => document.querySelector('#site-count').innerHTML = res);
+    count().then(res => {
+      document.querySelector('#site-count').innerHTML = res;
+      totalVisit = res;
+      showWelcome();
+    });
     log();
   }
 
