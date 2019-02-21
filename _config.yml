@@ -40,6 +40,11 @@ leancloud:
   comment: true # 是否开启评论系统
   count: true # 是否开启文章统计
 
+# 需要保证leancloud.comment为true
+welcome: 
+  enable: true
+  interval: wfw
+
 # 存放sha256加密的密码
 # 拥有所有加锁文章的阅读权限
 passwords: 
