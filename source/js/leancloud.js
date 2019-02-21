@@ -1,6 +1,7 @@
 (() => {
-  const { leancloud } = window.AD_CONFIG;
+  const { leancloud, welcome } = window.AD_CONFIG;
   let totalVisit = 0;
+  welcome.interval = Math.abs(parseInt(welcome.interval, 10)) || 30;
 
   function getPsgID(pathname) {
     if(!pathname) {
@@ -93,7 +94,7 @@
   function showWelcome() {
     const day = 60 * 60 * 24 * 1000;
     const layer = document.querySelector('#site-layer'),
-      welcome = document.querySelector('#site-layer-welcome'),
+      welcomeDOM = document.querySelector('#site-layer-welcome'),
       title = document.querySelector('#site-layer-title');
   
     let visitTime = parseInt(atob(window.localStorage.getItem('visit_time')), 10),
@@ -101,7 +102,7 @@
       offsetDays = 0;
     
     window.localStorage.setItem('visit_time', btoa(now.toString()));
-    
+  
     if(layer.style.display !== 'none' || !totalVisit) {
       return;
     }
@@ -111,21 +112,21 @@
     if(isNaN(offsetDays)) {
       layer.style.display = 'block';
       title.innerHTML = '欢迎到来';
-      welcome.innerHTML = `您是本站的第${totalVisit}位访问者`;
-      welcome.style.display = 'flex';
-    } else if (offsetDays >= 30) {
+      welcomeDOM.innerHTML = `您是本站的第${totalVisit}位访问者`;
+      welcomeDOM.style.display = 'flex';
+    } else if (offsetDays >= welcome.interval) {
       layer.style.display = 'block';
       title.innerHTML = '欢迎回来';
-      welcome.innerHTML = '您很久没来小站看看啦';
-      welcome.style.display = 'flex';
+      welcomeDOM.innerHTML = '您很久没来小站看看啦';
+      welcomeDOM.style.display = 'flex';
     } else {
       return;
     }
   
     window.AD_CONFIG.layer.add(() => {
       title.innerHTML = '';
-      welcome.innerHTML = '';
-      welcome.style.display = 'none';
+      welcomeDOM.innerHTML = '';
+      welcomeDOM.style.display = 'none';
     });
   }
 
@@ -141,7 +142,7 @@
     count().then(res => {
       document.querySelector('#site-count').innerHTML = res;
       totalVisit = res;
-      showWelcome();
+      welcome.enable && showWelcome();
     });
     log();
   }
