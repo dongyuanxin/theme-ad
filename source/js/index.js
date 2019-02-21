@@ -59,7 +59,8 @@
     '/js/scroll.js',
     '/js/backTop.js',
     '/js/time.js',
-    '/js/search.js'
+    '/js/search.js',
+    '/js/passage.js'
   ];
 
   // load after all srcs loaded
