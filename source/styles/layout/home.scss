@@ -46,12 +46,21 @@
       padding: 20px 15px;
     }
 
-    &[data-cover=true]:hover {
-      @media screen and (min-width: $main-width + 1px) {
-        z-index: 100;
-        // 防止内容换行
-        padding-left: 80px;
-        width: calc(100% + 20px);
+    &[data-cover=true] {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+
+      @media screen and (max-width: $mobile-width) {
+        border-radius: $border-radius-size;
+      }
+
+      &:hover {
+        @media screen and (min-width: $main-width + 1px) {
+          z-index: 100;
+          // 防止内容换行
+          padding-left: 80px;
+          width: calc(100% + 20px);
+        }
       }
     }
   }
