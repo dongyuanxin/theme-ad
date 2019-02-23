@@ -20,7 +20,6 @@
     prev.enable = !!page.prev;
     next.link = page.next ? url_for(page.next.path) : 'javascript:void(0);';
     next.enable = !!page.next;
-    catalog = true;
   } else if (is_archive() || is_tag() || is_category()) {
     prev.link = page.prev_link ? url_for(page.prev_link) : 'javascript:void(0);';
     prev.enable = !!page.prev_link;
@@ -30,6 +29,7 @@
   
   if (is_post() || page.type === 'about' || page.type === 'friends') {
     comments = true;
+    catalog = true;
   }
 %>
 
@@ -43,7 +43,7 @@
     </a>
   </div>
   <div class="bottom-bar-right">
-    <a href="javascript:void(0);" data-enable="<%- catalog %>">
+    <a href="javascript:void(0);" data-enable="<%- catalog %>" id="site-toc-show-btn">
       <i class="fa fa-bars"></i>
     </a>
     <% if(theme.leancloud.comment) { %>
