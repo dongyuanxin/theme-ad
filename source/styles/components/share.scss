@@ -1,0 +1,67 @@
+#share-btn {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 300;
+
+  @media screen and (max-width: $mobile-width) {
+    display: none;
+  }
+
+  a {
+    display: inline-block;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: white;
+    margin-bottom: 10px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    transition: all .3s;
+
+    &:hover {
+      padding-left: 8px;
+      width: 48px;
+    }
+  }
+
+  &-qq {
+    background: $color-blue-6;
+    &:hover {
+      background: $color-blue-4;
+    }
+  }
+
+  &-wechat {
+    background: $color-green-5;
+    &:hover {
+      background: $color-green-3;
+    }
+  }
+
+  &-twitter {
+    background: $color-light-blue-5;
+    &:hover {
+      background: $color-light-blue-3;
+    }
+  }
+
+  &-facebook {
+    background: $color-indigo-4;
+    &:hover {
+      background: $color-indigo-3;
+    }
+  }
+
+  &-weibo {
+    background: $color-red-4;
+    &:hover {
+      background: $color-red-3;
+    }
+  }
+}

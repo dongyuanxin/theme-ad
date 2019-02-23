@@ -1,0 +1,25 @@
+<div id="site-layer" style="display:none;">
+  <div class="site-layer-content">
+    <div class="site-layer-header">
+      <span class="site-layer-header-title" id="site-layer-title"></span>
+      <i class="fa fa-close" id="site-layer-close"></i>
+    </div>
+    <div class="site-layer-body" id="site-layer-container">
+      <div class="site-layer-input" id="site-layer-search" style="display: none;">
+        <input type="text">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="site-layer-reward" id="site-layer-reward" style="display: none;">
+        <% for(let reward of theme.reward) { %>
+          <div>
+            <img src="<%- reward.src %>" alt="<%= reward.alt %>">
+            <% if(reward.alt.length > 0) { %>
+              <p><%= reward.alt %></p>
+            <% } %>
+          </div>
+        <% } %>
+      </div>
+      <div id="site-layer-welcome" style="display:none;"></div>
+    </div>
+  </div>
+</div>

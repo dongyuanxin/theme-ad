@@ -1,0 +1,67 @@
+// Here you put all global css rules.
+
+* {
+  box-sizing: border-box; /* boostrap已经在通配符选择器这么做了 */
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: $font-size;
+  color: $color-grey-9;
+}
+
+body, input, label, select, option, textarea, button, fieldset, legend {
+  font-family: "Consolas", "Microsoft Jhenghei", "Hiragino Sans GB", "Microsoft YaHei";
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: $color-grey-0;
+}
+
+a {
+  color: $color-grey-9;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+    color: $color-grey-9;
+  }
+}
+
+main {
+  display: block;
+  margin: 0 auto;
+  padding-top: $header-height;
+  min-height: calc(100vh - #{$bottom-bar-height});
+  max-width: $main-width;
+
+  @media screen and (max-width: $mobile-width) {
+    margin: 0 20px;
+  }
+
+  @media screen and (min-width: $mobile-width + 1px) and (max-width: $main-width) {
+    margin: 0 50px;
+  }
+}
+
+.clearfix {
+  *zoom: 1; /* 兼容 IE 低版本 */
+
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+// mathjax 
+.mjx-chtml {
+  outline: 0;
+}
+.MJXc-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+}

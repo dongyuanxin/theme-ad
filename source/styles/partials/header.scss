@@ -1,0 +1,103 @@
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $header-height;
+  border-bottom: $color-grey-0 solid $header-bottom-size;
+  padding-left: 10px;
+  background: $color-grey-0;
+  z-index: 300;
+  
+  &-brand, &-right {
+    display: flex;
+    align-items: center;
+  }
+
+  &-brand {
+    &-title {
+      font-weight: bold;
+      font-size: 24px;
+
+      @media screen and (max-width: $mobile-width) {
+        font-size: 22px;
+      }
+    }
+    &-motto {
+      display: inline-block;
+      margin-left: 5px;
+      font-size: 14px;
+      color: $color-grey-7;
+
+      @media screen and (max-width: $mobile-width) {
+        display: none;
+      }
+    }
+  }
+
+  &-right {
+    justify-content: flex-end;
+    @media screen and (max-width: $mobile-width) {
+      width: 100%;
+      overflow: auto;
+    }
+  }
+
+  &-navigation {
+    font-size: 16px;
+    padding-left: 10px;
+    display: flex;
+    overflow: auto;
+
+    a {
+      margin-right: 15px;
+      color: $color-grey-5;
+      display: block;
+      transition: all .3s linear;
+
+      &:hover {
+        color: $color-grey-7;
+      }
+    }
+  }
+
+  &-btn {
+    font-size: 18px;
+    display: flex;
+    justify-content: flex-end;
+
+    a {
+      display: inline-block;
+      text-align: center;
+      height: $header-height - $header-bottom-size;
+      line-height: $header-height - $header-bottom-size;
+      width: $header-height - $header-bottom-size;
+      background: red;
+      cursor: pointer;
+
+      &:first-child {
+        background: $color-light-blue-3;
+      }
+
+      &:last-child {
+        background: $color-light-blue-5;
+      }
+
+      i {
+        color: white;
+      }
+    }
+  }
+}
+
+#site-process {
+  position: fixed;
+  left: 0;
+  top: $header-height - $header-bottom-size;
+  height: $header-bottom-size;
+  width: 0;
+  background: $color-blue-4;
+  z-index: 300;
+}

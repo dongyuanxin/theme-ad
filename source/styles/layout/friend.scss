@@ -1,0 +1,87 @@
+.friend {
+  $img-size: 250px !default;
+
+  %top-border-radius {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  &-card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 10px 0;
+  }
+
+  &-card {
+    width: $img-size;
+    background: white;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px $color-grey-3;
+
+    &-layer {
+      height: $img-size;
+      position: relative;
+
+      &:hover {
+        div {
+          height: 100%;
+        }
+      }
+    }
+    
+    &-meta {
+      @extend %top-border-radius;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: 100;
+      width: 100%;
+      height: 0;
+      overflow: hidden;
+      background-color: rgba(0, 0, 0, 0.6);
+      transition: all .3s ease;
+
+      p {
+        color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    &-avatar {
+      @extend %top-border-radius;
+      width: 100%;
+      height: $img-size;
+      object-fit: cover;      
+    }
+
+    &-content {
+      padding: 25px;
+      word-break: break-all;
+
+      &-title {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 2;
+      }
+
+      &-site {
+        font-weight: normal;
+        color: $color-grey-7;
+        transition: all .15s;
+
+        &:hover {
+          color: $color-blue-5;
+        }
+      }
+    }
+  }
+
+  article {
+    margin-bottom: 30px;
+  }
+}

@@ -1,0 +1,34 @@
+<div class="friend">
+  <% 
+    if(Array.isArray(theme.friends) && theme.friends.length > 0) { 
+      const cdn = theme.friends_avatar_cdn || '';
+  %>
+    <div class="friend-card-container">
+      <% for(let friend of theme.friends) { %>
+        <%
+          if(friend.show === false) {
+            continue;
+          }
+        %>
+        <div class="friend-card">
+          <div class="friend-card-layer">
+            <div class="friend-card-meta">
+              <p><%= friend.meta %></p>
+            </div>
+            <img class="friend-card-avatar" src="<%- cdn + friend.avatar %>"/>
+          </div>
+          <div class="friend-card-content">
+            <div class="friend-card-content-title"><%= friend.nickname %></div>
+            <a href="<%- friend.site %>" target="_blank" class="friend-card-content-site">
+              <%= friend.site.match(/(?:\w+\.)+\w+/)[0] %>
+            </a>
+          </div>
+        </div>
+      <% } %>
+    </div>
+  <% } %>
+  <article class="passage-article">
+    <%- page.content %>
+  </article>
+  <%- partial('components/toc') %>
+</div>

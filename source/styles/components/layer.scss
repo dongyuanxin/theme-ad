@@ -1,0 +1,119 @@
+#site-layer {
+  z-index: 600;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba($color: black, $alpha: 0.8);
+}
+
+.site-layer {
+
+  &-content {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 0;
+    border-radius: 4px;
+    background-clip: padding-box;
+    max-width: 400px;
+  }
+
+  &-header {
+    padding: 15px 25px;
+    border-bottom: 1px solid $color-grey-3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    &-title {
+      font-size: 18px;
+    }
+
+    i {
+      font-size: 24px;
+      color: $color-grey-5;
+      transition: all .3s ease;
+      
+      &:hover {
+        cursor: pointer;
+        color: $color-grey-7;
+      }
+    }
+  }
+
+  &-body {
+    padding: 25px;
+    min-height: 100px;
+    display: flex;
+    overflow-x: auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-input {
+    display: flex;
+    width: 100%;
+    position: relative;
+    
+    input {
+      list-style: none;
+      width: 100%;
+      height: 40px;
+      display: inline-block;
+      line-height: 1.5;
+      padding: 5px 30px 5px 10px;
+      color: $color-grey-9;
+      background-color: $color-grey-0;
+      background-image: none;
+      border: 1px solid $color-grey-2;
+      border-radius: 4px;
+      transition: all .3s;
+
+      &:focus {
+        border-color: $color-blue-3;
+        outline: 0;
+        box-shadow: 0 0 0 2px rgba($color: $color-blue-3, $alpha: 0.2);
+      }
+    }
+
+    i {
+      font-size: 16px;
+      position: absolute;
+      right: 9px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: $color-grey-5; 
+      transition: all .3s ease;
+      
+      &:hover {
+        cursor: pointer;
+        color: $color-blue-5;
+      }
+    }
+  }
+
+  &-reward {
+    width: 100%;
+    overflow: auto;
+
+    div {
+      width: 100%;
+      padding: 10px calc(50% - 128px);
+      text-align: center;
+
+      img {
+        width: 256px;
+        height: 256px;
+      }
+
+      p {
+        font-size: 18px;
+        margin: 10px 0;
+      }
+    }
+  }
+}

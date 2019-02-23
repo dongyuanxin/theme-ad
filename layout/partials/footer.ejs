@@ -1,0 +1,31 @@
+<div class="site-footer-wrapper">
+  <footer class="site-footer">
+    <% for(let col of theme.footer) { %>
+      <div class="site-footer-col">
+        <h5 class="site-footer-title"><%= col.title %></h5>
+        <% for(let item of col.children) { %>
+          <span class="site-footer-item">
+            <a href="<%- item.path %>" target="<%- item.path.startsWith('http') ? '_blank' : '_self' %>"><%= item.name %></a>
+          </span>
+        <% } %>
+      </div>
+    <% } %>
+    <div class="site-footer-info">
+      <i class="fa fa-clock-o"></i> 本站已稳定运行<span id="site-time"></span>
+    </div>
+    <% if(theme.leancloud.count === true) { %>
+      <div class="site-footer-info">
+        <i class="fa fa-paw"></i> 您是本站第 <span id="site-count"></span> 位访客
+      </div>
+    <% } %>
+    <div class="site-footer-info">
+      <i class="fa fa-at"></i> Email: yuanxin.me@gmail.com. QQ群: 534018786(主题交流)
+    </div>
+    <div class="site-footer-info">
+      <i class="fa fa-copyright"></i> 
+      2019 <a href="https://github.com/dongyuanxin/theme-ad/" target="_blank">Theme-AD</a>.
+      Created by <a href="https:/godbmw.com/" target="_blank">GodBMW</a>.
+      All rights reserved.
+    </div>
+  </footer>
+</div>

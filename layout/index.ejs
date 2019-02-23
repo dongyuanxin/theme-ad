@@ -1,3 +1,54 @@
-<div>
-  helo
+<div class="home">
+  <% for(let psg of page.posts.data){ %>
+    <div class="home-article-wrapper clearfix">
+      <div class="home-article" data-cover="<%- !!psg.cover %>">
+        <div class="home-article-inner" data-cover="<%- !!psg.cover %>">
+          <div class="passage-meta">
+            <span>
+              <i class="fa fa-calendar"></i><%- psg.date.format("YYYY-MM-DD") %>
+            </span>
+            <% if(psg.categories.length > 0) { %>
+              <span>
+                | <a href="<%- url_for(psg.categories.data[0].path) %>"><i class="fa fa-bookmark"></i><%- psg.categories.data[0].name %></a>
+              </span>
+            <% } %>
+            <% if(psg.lock === true) { %>
+              <span>
+                | <i class="fa fa-lock"></i>LOCK
+              </span>
+            <% } else { %>
+              <span>
+                | <i class="fa fa-unlock-alt"></i>UNLOCK
+              </span>
+            <% } %>
+          </div>
+          <h1 class="home-article-title">
+            <%- psg.title %>
+          </h1>
+          <div class="home-article-content passage-article">
+            <% if(psg.description && psg.description.length > 0) { %>
+              <%- psg.description %>
+            <% } else { %>
+              <%- psg.excerpt %>
+            <% } %>
+          </div>
+          <a class="home-article-read" href="<%- url_for(psg.path) %>">
+            README MORE >>>
+          </a>
+          <% if(psg.tags.length > 0) { %>
+            <div class="passage-tags">
+            <% for(let tag of psg.tags.data) { %> 
+              <a href="<%- url_for(tag.path) %>"><i class="fa fa-tags"></i><%- tag.name %></a>
+            <% } %>
+            </div>
+          <% } %>
+        </div>
+        <% if(psg.cover) { %>
+          <div class="home-article-cover">
+            <img src="<%- psg.cover %>">
+          </div>
+        <% } %>
+      </div>
+    </div>
+  <% } %>
 </div>

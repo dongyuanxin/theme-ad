@@ -1,0 +1,86 @@
+
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="<%- theme.author || config.author ||'董沅鑫, yuanxin.me@gmail.com' %>" />
+  <%
+    let title = page.title || '';
+
+    if (is_archive()){
+      title = '归档';
+
+      if (is_month()){
+        title += ': ' + page.year + '/' + page.month;
+      } else if (is_year()){
+        title += ': ' + page.year;
+      }
+    } else if (is_category()){
+      title = '分类: ' + page.category;
+    } else if (is_tag()){
+      title = '标签: ' + page.tag;
+    } else if (page.type === "about") {
+      title = "关于"
+    } else if (page.type === "tags") {
+      title = "标签"
+    } else if (page.type === "categories") {
+      title = "分类"
+    } else if (page.type === "friends") {
+      title = "友链"
+    }
+
+    title = title ? `${title} | ${config.title}` : config.title;
+  %>
+  
+  <title><%= title %></title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <% if ((page.tags && page.tags.length) || (page.categories && page.categories.length)) { %>
+    <meta name="keywords" content="<% page.categories.forEach((category) => { %><%= category.name %>,<% }); %><% page.tags.forEach((tag) => { %><%= tag.name %>,<% }); %>" />
+  <% } else { %>
+    <meta name="keywords" content="<%= theme.keywords %>" />
+  <% } %>
+
+  <%
+    let description;
+    const re = /<[^>]+>|\n|"/gim;
+
+    if(is_post()) {
+      description = page.description || page.excerpt.replace(re, '');
+    }
+    description = description || theme.description || config.description;
+  %>
+  <meta name="description" content="<%= description %>">
+
+  <% if (theme.rss){ %>
+    <link rel="alternate" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
+  <% } %>
+
+  <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.11.1/dist/av-min.js" async></script>
+
+  <% if(theme.mathjax) { %>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+  <% } %>
+
+  <% if(theme.leancloud.comment) { %>
+    <script src="//unpkg.com/valine/dist/Valine.min.js" async></script>
+  <% } %>
+
+  <%- partial('components/config') %>
+
+  <%- js(['/vendor/sha256.min.js', '/js/auth.js', '/js/index.js', '/vendor/qrcode.min.js']) %>
+
+  <% if (theme.favicon){ %>
+    <link rel="icon" href="<%- theme.favicon.icon %>">
+    <link rel="apple-touch-icon" href="<%- theme.favicon.touch_icon %>">
+  <% } %>
+
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <%- css(['/css/index.css', '/styles/components/highlight/highlight.css']) %>
+
+  <% if (theme.custom_style){ %>
+    <%- css(theme.custom_style) %>
+  <% } %>
+
+  <%- partial('components/analytics') %>
+</head>

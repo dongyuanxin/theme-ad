@@ -1,7 +1,20 @@
 <!DOCTYPE html>
 <html>
-  <%- partial('partials/header') %>
+  <%- partial('partials/head') %>
   <body>
-    <%- body %>
+    <%- partial('partials/header') %>
+    <main>
+      <%- body %>
+    </main>
+    <% if(
+      theme.leancloud.comment && 
+      (is_post() || page.type === 'about' || page.type === 'friends')
+    ){ %>
+      <%- partial('components/comment') %>
+    <% } %>
+    <%- partial('partials/footer') %>
+    <%- partial('components/layer') %>
+    <%- partial('components/bottom-bar') %>
+    <%- partial('components/share') %>
   </body>
 </html>

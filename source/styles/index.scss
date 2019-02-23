@@ -1,0 +1,14 @@
+// import global mixins
+@import './mixins/';
+
+// import global styles
+@import './global';
+
+// import components styles
+@import './components/';
+
+// import partials styles
+@import './partials/';
+
+// import layout styles
+@import './layout/';

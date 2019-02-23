@@ -1,0 +1,11 @@
+<% if(is_post()) { %>
+  <%- partial('passage') %>
+<% } else if(page.type === 'tags') { %>
+  <%- partial('tags') %>
+<% } else if(page.type === 'categories') { %>
+  <%- partial('categories') %>
+<% } else if(page.type === 'about') { %>
+  <%- partial('about') %>
+<% } else if(page.type === 'friends') { %>
+  <%- partial('friends') %>
+<% } %>

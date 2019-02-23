@@ -1,0 +1,16 @@
+<div class="timeline">
+  <h2 class="timeline-title">归档: <%= site.posts.length %>篇</h2>
+  <% for(let i = 0, year = -1; i < page.posts.data.length; ++i) { %>
+    <% 
+      const psg = page.posts.data[i];
+      if(psg.date.year() !== year) {
+        year = psg.date.year();
+    %>
+      <h3 class="timeline-subtitle"><%= year %></h3>
+    <% } %>
+    <div class="timeline-item">
+      <time><%- psg.date.format("YYYY-MM-DD") %></time>
+      <a target="_self" href="<%- url_for(psg.path) %>"><%= psg.title %></a>
+    </div>
+  <% } %>
+</div>

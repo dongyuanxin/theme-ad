@@ -1,0 +1,90 @@
+.table-content {
+  $toc-width: 300px !default;
+
+  display: block;
+  position: fixed;
+  right: -$toc-width;
+  top: 0;
+  height: 100vh;
+  width: $toc-width;
+  background: $color-grey-1;
+  overflow-y: auto;
+  z-index: 900;
+  transition: right .3s ease;
+
+  &-title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: $header-height;
+    border-bottom: $header-bottom-size dotted $color-blue-4;
+
+    #site-toc-hide-btn {
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      height: $header-height - $header-bottom-size;
+      line-height: $header-height - $header-bottom-size;
+      color: $color-light-blue-5;
+      cursor: pointer;
+      transition: all .3s ease;
+
+      &:hover {
+        color: $color-light-blue-4;
+        left: 20px;
+      }
+    }
+
+    span {
+      display: inline-block;
+      background: $color-light-blue-5;
+      color: white;
+      margin: 0 auto;
+      padding: 0 15px;
+      height: 30px;
+      line-height: 30px;
+      transition: all .3s ease;
+
+      &:hover {
+        background: $color-light-blue-4;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &-main {
+    padding: 20px 0 20px 13px;
+    font-family: Lato, Helvetica Neue For Number, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif;
+
+    ol, ul, li {
+      list-style: none;
+    }
+
+    .toc-item {
+      line-height: 35px;
+
+      a {
+        color: $color-grey-6;
+        padding-left: 0;
+        border-left: 2px solid transparent;
+        display: inline-block;
+        width: 100%;
+        transition: padding-left .3s ease, background .3s ease, border-left-color .1s linear;
+
+        &:hover {
+          padding-left: 10px;
+          border-left-color: $color-light-blue-5;
+          color: $color-light-blue-5;
+          background: $color-light-blue-0;
+        }
+      }
+    }
+
+    .toc-child {
+      padding-top: 4px;
+      padding-left: 15px;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.site-comment-contanier {
+  background: white;
+  padding-top: 30px;
+
+  %block-size {
+    max-width: $main-width;
+    margin: 0 auto;
+  }
+
+  @media screen and (max-width: $mobile-width) {
+    padding: 30px 20px 0;
+  }
+
+  @media screen and (min-width: $mobile-width + 1px) and (max-width: $main-width) {
+    padding: 30px 50px 0;
+  }
+
+  #site-comment-info {
+    @extend %block-size;
+    padding: 5px;
+    line-height: 2;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  #site-comment {
+    @extend %block-size;
+    padding-bottom: 20px;
+
+    .vinfo .vcount {
+      display: none !important;
+    }
+  }
+}
+

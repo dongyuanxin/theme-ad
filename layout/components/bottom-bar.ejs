@@ -1,0 +1,64 @@
+<%
+  let catalog = false, 
+    comments = false,
+    next = {
+      link: 'javascript:void(0);',
+      enable: false
+    }, 
+    prev = {
+      link: 'javascript:void(0);',
+      enable: false
+    };
+
+  if(is_home()) {
+    prev.enable = page.current !== 1;
+    prev.link = prev.enable ? url_for(page.prev_link) : 'javascript:void(0);';
+    next.enable = page.current !== page.total;
+    next.link = next.enable ? url_for(page.next_link) : 'javascript:void(0);';
+  } else if (is_post()) {
+    prev.link = page.prev ? url_for(page.prev.path) : 'javascript:void(0);';
+    prev.enable = !!page.prev;
+    next.link = page.next ? url_for(page.next.path) : 'javascript:void(0);';
+    next.enable = !!page.next;
+  } else if (is_archive() || is_tag() || is_category()) {
+    prev.link = page.prev_link ? url_for(page.prev_link) : 'javascript:void(0);';
+    prev.enable = !!page.prev_link;
+    next.link = page.next_link ? url_for(page.next_link) : 'javascript:void(0);';
+    next.enable = !!page.next_link;
+  } 
+  
+  if (is_post() || page.type === 'about' || page.type === 'friends') {
+    comments = true;
+    catalog = true;
+  }
+%>
+
+<div class="bottom-bar">
+  <div class="bottom-bar-left">
+    <a href="<%- prev.link %>" data-enable="<%- prev.enable %>">
+      <i class="fa fa-arrow-left"></i>
+    </a>
+    <a href="<%- next.link %>" data-enable="<%- next.enable %>">
+      <i class="fa fa-arrow-right"></i>
+    </a>
+  </div>
+  <div class="bottom-bar-right">
+    <a href="javascript:void(0);" data-enable="<%- catalog %>" id="site-toc-show-btn">
+      <i class="fa fa-bars"></i>
+    </a>
+    <% if(theme.leancloud.comment) { %>
+      <a href="<%- comments ? '#site-comment' : 'javascript:void(0);'%>" data-enable="<%- comments %>">
+        <i class="fa fa-commenting"></i>
+      </a>
+    <% } %>
+    <a href="javascript:void(0);" id="site-toggle-share-btn">
+      <i class="fa fa-share-alt"></i>
+    </a>
+    <a href="javascript:void(0);" id="site-reward">
+      <i class="fa fa-thumbs-up"></i>
+    </a>
+    <a href="javascript:void(0);" id="back-top-btn">
+      <i class="fa fa-chevron-up"></i>
+    </a>
+  </div>
+</div>
