@@ -4,7 +4,7 @@
   }
 
   document
-    .querySelectorAll('.passage')
+    .querySelectorAll('.passage-article')
     .forEach(
       passage => 
         passage
