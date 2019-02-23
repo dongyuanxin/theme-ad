@@ -5,10 +5,10 @@ keywords: Hexo, Theme-AD
 description: 董沅鑫的小站
 
 # 导航栏头部名称
-nav_name: YuanXin
+nav_name: GODBMW
 
 # 导航栏座右铭
-motto: "归来仍是少年"
+motto: 
 
 github: "https://github.com/dongyuanxin/"
 
@@ -43,12 +43,12 @@ leancloud:
 # 需要保证leancloud.comment为true
 welcome: 
   enable: true
-  interval: wfw
+  interval: 30
 
 # 存放sha256加密的密码
 # 拥有所有加锁文章的阅读权限
 passwords: 
-  - 9fd4703ff67642ec7fc0f8616d7513e620263fa6f3758b5836f496dfe334ae34 # dongyuanxin
+  - efe07af7441da2b69c4a41e42e73be4db47f66010a56900788a458354a7373ec # godbmw
 
 share:
   twitter: true
