@@ -5,10 +5,10 @@ keywords: Hexo, Theme-AD
 description: 董沅鑫的小站
 
 # 导航栏头部名称
-nav_name: YuanXin
+nav_name: GODBMW
 
 # 导航栏座右铭
-motto: "归来仍是少年"
+motto: "安静写些东西"
 
 github: "https://github.com/dongyuanxin/"
 
@@ -43,12 +43,12 @@ leancloud:
 # 需要保证leancloud.comment为true
 welcome: 
   enable: true
-  interval: wfw
+  interval: 30
 
 # 存放sha256加密的密码
 # 拥有所有加锁文章的阅读权限
 passwords: 
-  - 9fd4703ff67642ec7fc0f8616d7513e620263fa6f3758b5836f496dfe334ae34 # dongyuanxin
+  - efe07af7441da2b69c4a41e42e73be4db47f66010a56900788a458354a7373ec # godbmw
 
 share:
   twitter: true
@@ -102,9 +102,6 @@ footer:
       - 
         name: "阮一峰的个人网站"
         path: "http://ruanyifeng.com/"
-      -
-        name: "廖雪峰的官方网站"
-        path: "https://www.liaoxuefeng.com/"
   -
     title: "系列教程"
     children:
@@ -114,24 +111,6 @@ footer:
       -
         name: "设计模式手册"
         path: "https://godbmw.com/design-patterns/"
-      -
-        name: "Leetcode解题报告"
-        path: "https://godbmw.com/leetcode/"
-  -
-    title: "实验室"
-    children:
-      -
-        name: "Music API"
-        path: "https://github.com/dongyuanxin/music-api-next"
-      -
-        name: "Webpack4 Demos"
-        path: "https://github.com/dongyuanxin/webpack-demos"
-      -
-        name: "Theme bmw"
-        path: "https://github.com/dongyuanxin/theme-bmw"
-      -
-        name: "金融情感分析模型"
-        path: "https://github.com/dongyuanxin/news-emotion"
   -
     title: "抓到我"
     children: 
@@ -141,18 +120,14 @@ footer:
       -
         name: "思否"
         path: "https://segmentfault.com/"
-      -
-        name: "简书"
-        path: "https://www.jianshu.com/u/d1570f4a618a"
-      -
-        name: "知乎"
-        path: "https://www.zhihu.com/people/godbmw/activities"
+
+footer_contact: "Email: yuanxin.me@gmail.com"
 
 friends_avatar_cdn: 
 friends:
   -
     nickname: GodBMW
     avatar: /images/friends/godbmw.jpeg
-    site: https://godbmw.com
-    meta: 我自己♪(^∇^*)
+    site: https://godbmw.com/
+    meta: 主题作者
     show: true

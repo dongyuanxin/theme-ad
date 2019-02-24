@@ -18,9 +18,11 @@
         <i class="fa fa-paw"></i> 您是本站第 <span id="site-count"></span> 位访客
       </div>
     <% } %>
-    <div class="site-footer-info">
-      <i class="fa fa-at"></i> Email: yuanxin.me@gmail.com. QQ群: 534018786(主题交流)
-    </div>
+    <% if(theme.footer_contact) { %>
+      <div class="site-footer-info">
+        <i class="fa fa-at"></i> <%= theme.footer_contact %>
+      </div>
+    <% } %>
     <div class="site-footer-info">
       <i class="fa fa-copyright"></i> 
       2019 <a href="https://github.com/dongyuanxin/theme-ad/" target="_blank">Theme-AD</a>.
