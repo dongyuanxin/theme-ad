@@ -8,7 +8,7 @@ description: 董沅鑫的小站
 nav_name: GODBMW
 
 # 导航栏座右铭
-motto: 
+motto: "安静写些东西"
 
 github: "https://github.com/dongyuanxin/"
 
@@ -102,9 +102,6 @@ footer:
       - 
         name: "阮一峰的个人网站"
         path: "http://ruanyifeng.com/"
-      -
-        name: "廖雪峰的官方网站"
-        path: "https://www.liaoxuefeng.com/"
   -
     title: "系列教程"
     children:
@@ -114,24 +111,6 @@ footer:
       -
         name: "设计模式手册"
         path: "https://godbmw.com/design-patterns/"
-      -
-        name: "Leetcode解题报告"
-        path: "https://godbmw.com/leetcode/"
-  -
-    title: "实验室"
-    children:
-      -
-        name: "Music API"
-        path: "https://github.com/dongyuanxin/music-api-next"
-      -
-        name: "Webpack4 Demos"
-        path: "https://github.com/dongyuanxin/webpack-demos"
-      -
-        name: "Theme bmw"
-        path: "https://github.com/dongyuanxin/theme-bmw"
-      -
-        name: "金融情感分析模型"
-        path: "https://github.com/dongyuanxin/news-emotion"
   -
     title: "抓到我"
     children: 
@@ -141,18 +120,14 @@ footer:
       -
         name: "思否"
         path: "https://segmentfault.com/"
-      -
-        name: "简书"
-        path: "https://www.jianshu.com/u/d1570f4a618a"
-      -
-        name: "知乎"
-        path: "https://www.zhihu.com/people/godbmw/activities"
+
+footer_contact: "Email: yuanxin.me@gmail.com"
 
 friends_avatar_cdn: 
 friends:
   -
     nickname: GodBMW
     avatar: /images/friends/godbmw.jpeg
-    site: https://godbmw.com
-    meta: 我自己♪(^∇^*)
+    site: https://godbmw.com/
+    meta: 主题作者
     show: true
