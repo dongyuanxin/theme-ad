@@ -23,7 +23,7 @@
             <% } %>
           </div>
           <h1 class="home-article-title">
-            <%- psg.title %>
+            <a href="<%- url_for(psg.path) %>"><%- psg.title %></a>
           </h1>
           <div class="home-article-content passage-article">
             <% if(psg.description && psg.description.length > 0) { %>
