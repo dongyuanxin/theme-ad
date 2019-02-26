@@ -110,10 +110,9 @@
     }
 
     img {
-      display: inline-block;
-      margin-top: 10px;
-      margin-right: 20px;
-      max-width: 100%;
+      display: block;
+      margin: 0 auto;
+      max-width: 90%;
       border-radius: 10px;
       border: 1px solid $color-grey-2;
       cursor: pointer;
