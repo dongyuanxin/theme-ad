@@ -204,6 +204,24 @@
     }
   }
 
+  &-copyright {
+    border-left: 3px solid $color-deep-orange-5;
+    background: $color-grey-2;
+    padding: 15px 20px;
+    margin-top: 30px;
+
+    div {
+      line-height: 2;
+    }
+
+    a {
+      transition: all .1s linear;
+      &:hover {
+        color: $color-deep-orange-6;
+      }
+    }
+  }
+
   &-meta {
     font-size: 16px;
     color: $color-grey-7;

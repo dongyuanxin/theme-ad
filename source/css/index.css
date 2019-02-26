@@ -642,6 +642,17 @@ main {
       background-size: contain;
       background-repeat: no-repeat;
       background-attachment: fixed; }
+  .passage-copyright {
+    border-left: 3px solid #FF5722;
+    background: #EEEEEE;
+    padding: 15px 20px;
+    margin-top: 30px; }
+    .passage-copyright div {
+      line-height: 2; }
+    .passage-copyright a {
+      transition: all .1s linear; }
+      .passage-copyright a:hover {
+        color: #F4511E; }
   .passage-meta {
     font-size: 16px;
     color: #616161; }
