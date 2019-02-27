@@ -28,6 +28,7 @@
     lock: <%- !!page.lock %>,
     author: "<%= theme.author || config.author || 'Dong Yuanxin' %>",
     share: <%- JSON.stringify(theme.share) %>,
-    mathjax: <%- !!theme.mathjax %>
+    mathjax: <%- !!theme.mathjax %>,
+    page_type: "<%- page.type || '' %>"
   };
 </script>

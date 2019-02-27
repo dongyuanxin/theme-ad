@@ -29,6 +29,20 @@
   <article class="passage-article">
     <%- page.more %>
   </article>
+  <% if(theme.copyright.enable) { %>
+    <aside class="passage-copyright">
+      <div>本文作者: <%- theme.copyright.author || theme.author || config.author %></div>
+      <% if(theme.copyright.show_link) { %>
+        <div>
+          原文链接: 
+          <a href="<% url_for(page.path)%>" target="_blank"><%- page.permalink %></a>
+        </div>
+      <% } %>
+      <div>
+        <%- theme.copyright.more %>
+      </div>
+    </aside>
+  <% } %>
   <%- partial('components/toc') %>
   <% if(page.tags.length > 0) { %>
     <div class="passage-tags">

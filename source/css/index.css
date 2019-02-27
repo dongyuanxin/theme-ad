@@ -579,10 +579,9 @@ main {
       color: #D84315;
       word-wrap: break-word; }
     .passage-article img {
-      display: inline-block;
-      margin-top: 10px;
-      margin-right: 20px;
-      max-width: 100%;
+      display: block;
+      margin: 0 auto;
+      max-width: 90%;
       border-radius: 10px;
       border: 1px solid #EEEEEE;
       cursor: pointer;
@@ -643,6 +642,17 @@ main {
       background-size: contain;
       background-repeat: no-repeat;
       background-attachment: fixed; }
+  .passage-copyright {
+    border-left: 3px solid #FF5722;
+    background: #EEEEEE;
+    padding: 15px 20px;
+    margin-top: 30px; }
+    .passage-copyright div {
+      line-height: 2; }
+    .passage-copyright a {
+      transition: all .1s linear; }
+      .passage-copyright a:hover {
+        color: #F4511E; }
   .passage-meta {
     font-size: 16px;
     color: #616161; }
