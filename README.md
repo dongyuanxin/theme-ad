@@ -7,7 +7,7 @@
 [![](https://img.shields.io/badge/made_with-love-ff69b4.svg?style=popout-square)](https://godbmw.com/)
 [![](https://img.shields.io/badge/build-passing-success.svg?style=popout-square)](https://github.com/dongyuanxin/theme-ad)
 [![](https://img.shields.io/badge/code_size-127KB-ff9800.svg?style=popout-square)](https://godbmw.com/)
-[![](https://img.shields.io/badge/release-v1.0.0--beta.1-blue.svg?style=popout-square)](https://github.com/dongyuanxin/theme-ad/releases)
+[![](https://img.shields.io/badge/release-v1.0.0--beta.2-blue.svg?style=popout-square)](https://github.com/dongyuanxin/theme-ad/releases)
 [![](https://img.shields.io/badge/hexo-≥v3.0-blue.svg?style=popout-square)](https://hexo.io/)
 [![](https://img.shields.io/badge/leancloud-v3.11.1-blue.svg?style=popout-square)](https://leancloud.cn/)
 [![](https://img.shields.io/badge/license-MIT-blue.svg?style=popout-square)](https://github.com/dongyuanxin/theme-ad)
