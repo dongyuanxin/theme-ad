@@ -30,11 +30,13 @@
     layer.style.display = 'block';
     layerContent.style.display = 'none';
     toc.style.right = '0';
+
+    window.AD_CONFIG.layer.add(() => {
+      toc.style.right = '';
+      layer.style.display = 'none';
+      layerContent.style.display = '';
+    });
   });
   
-  tocHideBtn && tocHideBtn.addEventListener('click', (e) => {
-    toc.style.right = '';
-    layer.style.display = 'none';
-    layerContent.style.display = '';
-  });
+  tocHideBtn && tocHideBtn.addEventListener('click', window.AD_CONFIG.layer.trigger);
 })();
