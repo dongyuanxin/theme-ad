@@ -65,7 +65,7 @@ share:
 
 analytics:
   baidu:
-    enable: true
+    enable: false
   google:
     enable: false
     id: 
