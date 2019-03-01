@@ -25,3 +25,12 @@
   })();
   </script>
 <% } %>
+
+<% if(theme.analytics["360"].enable) { %>
+  <script async>
+    (function(){
+    var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?<%= theme.analytics["360"].id %>":"https://jspassport.ssl.qhimg.com/11.0.1.js?<%= theme.analytics["360"].id %>";
+    document.write('<script src="' + src + '" id="sozz"><\/script>');
+    })();
+  </script>
+<% } %>

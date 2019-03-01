@@ -65,8 +65,11 @@ share:
 
 analytics:
   baidu:
-    enable: false
+    enable: true
   google:
+    enable: false
+    id: 
+  "360":
     enable: false
     id: 
 

@@ -29,6 +29,7 @@
   <article class="passage-article">
     <%- page.more %>
   </article>
+  <%- partial('components/toc') %>
   <% if(theme.copyright.enable) { %>
     <aside class="passage-copyright">
       <div>本文作者: <%- theme.copyright.author || theme.author || config.author %></div>
@@ -43,7 +44,6 @@
       </div>
     </aside>
   <% } %>
-  <%- partial('components/toc') %>
   <% if(page.tags.length > 0) { %>
     <div class="passage-tags">
     <% for(let tag of page.tags.data) { %> 
