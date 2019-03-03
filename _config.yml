@@ -20,8 +20,11 @@ favicon:
 # RSS文件位置
 rss: 
 
-# 自定义样式文件位置
-custom_style: 
+# 自定义样式文件
+custom_styles: 
+
+# 自定义脚本文件
+custom_scripts: 
 
 # 代码高亮主题
 highlight_theme: "night eighties"
