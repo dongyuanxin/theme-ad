@@ -26,7 +26,7 @@ custom_styles:
 # 自定义脚本文件
 custom_scripts: 
 
-# 代码高亮主题
+# 代码高亮主题: normal | night | night blue | night bright | night eighties
 highlight_theme: "night eighties"
 
 # 开启数学公式渲染
