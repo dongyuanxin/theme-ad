@@ -534,18 +534,18 @@ main {
       .passage-article h1:hover::before, .passage-article h2:hover::before, .passage-article h3:hover::before, .passage-article h4:hover::before, .passage-article h5:hover::before, .passage-article h6:hover::before {
         color: #2196F3; }
     .passage-article h1 {
-      font-size: 32px;
+      font-size: 2em;
       margin: 16px 0; }
     .passage-article h2 {
-      font-size: 24px; }
+      font-size: 1.75em; }
     .passage-article h3 {
-      font-size: 22px; }
+      font-size: 1.5em; }
     .passage-article h4 {
-      font-size: 20px; }
+      font-size: 1.25em; }
     .passage-article h5 {
-      font-size: 18px; }
+      font-size: 1.125em; }
     .passage-article h6 {
-      font-size: 16px; }
+      font-size: 1em; }
     .passage-article p {
       margin: 12px 0; }
     .passage-article blockquote {
@@ -584,9 +584,8 @@ main {
       display: block;
       margin: 0 auto;
       max-width: 90%;
-      border-radius: 10px;
-      border: 1px solid #EEEEEE;
-      cursor: pointer;
+      border-radius: 5px;
+      cursor: zoom-in;
       transition: all .3s linear; }
       .passage-article img:hover {
         box-shadow: 0 0 3px #9E9E9E; }

@@ -27,6 +27,7 @@
       title = "友链"
     }
 
+    page.current && page.current > 1 && (title = `${title} | 第${page.current}页`);
     title = title ? `${title} | ${config.title}` : config.title;
   %>
   
@@ -78,7 +79,7 @@
 
   <%- css(['/css/index.css', '/styles/components/highlight/highlight.css']) %>
 
-  <% if (theme.custom_style){ %>
-    <%- css(theme.custom_style) %>
+  <% if (theme.custom_styles){ %>
+    <%- css(theme.custom_styles) %>
   <% } %>
 </head>

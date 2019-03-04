@@ -7,13 +7,13 @@
 [![](https://img.shields.io/badge/made_with-love-ff69b4.svg?style=popout-square)](https://godbmw.com/)
 [![](https://img.shields.io/badge/build-passing-success.svg?style=popout-square)](https://github.com/dongyuanxin/theme-ad)
 [![](https://img.shields.io/badge/code_size-127KB-ff9800.svg?style=popout-square)](https://godbmw.com/)
-[![](https://img.shields.io/badge/release-v1.0.0--beta.2-blue.svg?style=popout-square)](https://github.com/dongyuanxin/theme-ad/releases)
+[![](https://img.shields.io/badge/release-v2.0.0-blue.svg?style=popout-square)](https://github.com/dongyuanxin/theme-ad/releases)
 [![](https://img.shields.io/badge/hexo-≥v3.0-blue.svg?style=popout-square)](https://hexo.io/)
 [![](https://img.shields.io/badge/leancloud-v3.11.1-blue.svg?style=popout-square)](https://leancloud.cn/)
 [![](https://img.shields.io/badge/license-MIT-blue.svg?style=popout-square)](https://github.com/dongyuanxin/theme-ad)
 
 - README / [中文介绍](./README.cn.md)
-- DOCUMENT / 中文文档
+- DOCUMENT / [中文文档](https://godbmw.com/passages/2019-03-03-theme-ad-docs-zh/)
 
 ## Preview
 
@@ -37,10 +37,11 @@
 
 ## Todo
 
-- [ ] Document
-- [ ] Chinese README
-- [ ] Beta Test
-- [ ] Internationl
+- [x] Chinese Document
+- [x] Chinese README
+- [x] Version Test
+- [ ] English Document
+- [ ] Languages Support
 
 ## Contact
 

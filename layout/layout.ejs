@@ -17,5 +17,8 @@
     <%- partial('components/bottom-bar') %>
     <%- partial('components/share') %>
     <%- partial('components/analytics') %>
+    <% if (theme.custom_scripts){ %>
+      <%- js(theme.custom_scripts) %>
+    <% } %>
   </body>
 </html>
