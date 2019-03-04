@@ -37,28 +37,28 @@
     }
 
     h1 {
-      font-size: 32px;
+      font-size: 2em;
       margin: 16px 0;
     }
 
     h2 {
-      font-size: 24px;
+      font-size: 1.75em;
     }
 
     h3 {
-      font-size: 22px;
+      font-size: 1.5em;
     }
 
     h4 {
-      font-size: 20px;
+      font-size: 1.25em;
     }
 
     h5 {
-      font-size: 18px;
+      font-size: 1.125em;
     }
 
     h6 {
-      font-size: 16px;
+      font-size: 1em;
     }
 
     p {
@@ -113,9 +113,8 @@
       display: block;
       margin: 0 auto;
       max-width: 90%;
-      border-radius: 10px;
-      border: 1px solid $color-grey-2;
-      cursor: pointer;
+      border-radius: 5px;
+      cursor: zoom-in;
       transition: all .3s linear;
 
       &:hover {
