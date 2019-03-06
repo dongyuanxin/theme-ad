@@ -17,14 +17,33 @@
     </nav>
     <div class="site-header-btn">
       <% if(theme.github) { %>
-        <a href="<%- theme.github %>" target="_blank">
+        <a href="<%- theme.github %>" target="_blank" id="site-github">
           <i class="fa fa-github-alt"></i>
         </a>
       <% } %>
       <a href="javascript:void(0);" id="site-search">
         <i class="fa fa-search"></i>
       </a>
+      <a href="javascript:void(0);" id="site-nav-btn">
+        <i class="fa fa-ellipsis-v"></i>
+      </a>
     </div>
   </div>
 </header>
+<nav class="table-content" id="site-nav">
+  <div class="table-content-title">
+    <span>导航</span>
+  </div>
+  <div class="table-content-main">
+    <ol class="toc">
+      <% for(let link of theme.nav) { %>
+        <li class="toc-item">
+          <a href="<%- link.path %>" target="<%- link.path.startsWith('http') ? '_blank' : '_self' %>">
+            <%= link.name %>
+          </a>
+        </li>
+      <% } %>
+    </ol>
+  </div>
+</nav>
 <div id="site-process"></div>
