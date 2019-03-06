@@ -10,6 +10,10 @@
   padding-left: 10px;
   background: $color-grey-0;
   z-index: 300;
+
+  @media screen and (max-width: $mobile-width) {
+    background: $color-grey-1;
+  }
   
   &-brand, &-right {
     display: flex;
@@ -31,18 +35,11 @@
       font-size: 14px;
       color: $color-grey-7;
 
-      @media screen and (max-width: $mobile-width) {
-        display: none;
-      }
     }
   }
 
   &-right {
     justify-content: flex-end;
-    @media screen and (max-width: $mobile-width) {
-      width: 100%;
-      overflow: auto;
-    }
   }
 
   &-navigation {
@@ -50,6 +47,10 @@
     padding-left: 10px;
     display: flex;
     overflow: auto;
+
+    @media screen and (max-width: $mobile-width) {
+      display: none;
+    }
 
     a {
       margin-right: 15px;
@@ -73,20 +74,60 @@
       text-align: center;
       height: $header-height - $header-bottom-size;
       line-height: $header-height - $header-bottom-size;
-      width: $header-height - $header-bottom-size;
-      background: red;
       cursor: pointer;
 
-      &:first-child {
-        background: $color-light-blue-3;
+      @media screen and (min-width: $mobile-width + 1px) {
+        width: $header-height - $header-bottom-size;
+
+        &#site-github {
+          background: $color-light-blue-3;
+        }
+
+        &#site-search {
+          background: $color-light-blue-5;
+        }
+
+        &#site-nav-btn {
+          display: none;
+        }
+
+        i {
+          color: white;
+        }
       }
 
-      &:last-child {
-        background: $color-light-blue-5;
-      }
+      @media screen and (max-width: $mobile-width) {
+        &#site-github {
+          display: none;
+        }
 
-      i {
-        color: white;
+        i {
+          padding: 0 20px 0 10px;
+          color: $color-grey-7;
+        }
+      }
+    }
+  }
+}
+
+// Use TOC Style and change something
+#site-nav {
+  $nav-width: 200px !default;
+  z-index: 900;
+  right: -$nav-width;
+  width: $nav-width;
+
+  .table-content-main {
+    padding-left: 0;
+
+    li {
+      text-align: center;
+      a {
+        border-left: 0;
+
+        &:hover {
+          padding-left: 0;
+        }
       }
     }
   }

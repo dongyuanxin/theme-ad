@@ -5,15 +5,18 @@
     window.open(href);
   }
 
-  const navBtn = document.querySelector('#site-search'),
+  const searchBtn = document.querySelector('#site-search'),
+    nav = document.querySelector('#site-nav'),
+    navBtn = document.querySelector('#site-nav-btn'),
     layer = document.querySelector('#site-layer'),
+    layerContent = layer.querySelector('.site-layer-content'),
     title = document.querySelector('#site-layer-title'),
     searchDOM = document.querySelector('#site-layer-search');
 
   const inputDOM = searchDOM.querySelector('input'),
     iconDOM = searchDOM.querySelector('i');
 
-  navBtn.addEventListener('click', (e) => {
+  searchBtn.addEventListener('click', (e) => {
     layer.style.display = 'block';
     searchDOM.style.display = 'flex';
     inputDOM.focus();
@@ -41,6 +44,20 @@
     if(value.length > 0) {
       openGoogle(value);
     }
+  });
+
+  navBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    layer.style.display = 'block';
+    layerContent.style.display = 'none';
+    nav.style.right = '0';
+
+    window.AD_CONFIG.layer.add(() => {
+      nav.style.right = '';
+      layer.style.display = 'none';
+      layerContent.style.display = '';
+    });
   });
   
 })();
