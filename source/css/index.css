@@ -325,6 +325,9 @@ main {
   padding-left: 10px;
   background: #FAFAFA;
   z-index: 300; }
+  @media screen and (max-width: 768px) {
+    .site-header {
+      background: #F5F5F5; } }
   .site-header-brand, .site-header-right {
     display: flex;
     align-items: center; }
@@ -339,20 +342,16 @@ main {
     margin-left: 5px;
     font-size: 14px;
     color: #616161; }
-    @media screen and (max-width: 768px) {
-      .site-header-brand-motto {
-        display: none; } }
   .site-header-right {
     justify-content: flex-end; }
-    @media screen and (max-width: 768px) {
-      .site-header-right {
-        width: 100%;
-        overflow: auto; } }
   .site-header-navigation {
     font-size: 16px;
     padding-left: 10px;
     display: flex;
     overflow: auto; }
+    @media screen and (max-width: 768px) {
+      .site-header-navigation {
+        display: none; } }
     .site-header-navigation a {
       margin-right: 15px;
       color: #9E9E9E;
@@ -369,15 +368,37 @@ main {
       text-align: center;
       height: 58px;
       line-height: 58px;
-      width: 58px;
-      background: red;
       cursor: pointer; }
-      .site-header-btn a:first-child {
-        background: #4FC3F7; }
-      .site-header-btn a:last-child {
-        background: #03A9F4; }
-      .site-header-btn a i {
-        color: white; }
+      @media screen and (min-width: 769px) {
+        .site-header-btn a {
+          width: 58px; }
+          .site-header-btn a#site-github {
+            background: #4FC3F7; }
+          .site-header-btn a#site-search {
+            background: #03A9F4; }
+          .site-header-btn a#site-nav-btn {
+            display: none; }
+          .site-header-btn a i {
+            color: white; } }
+      @media screen and (max-width: 768px) {
+        .site-header-btn a#site-github {
+          display: none; }
+        .site-header-btn a i {
+          padding: 0 20px 0 10px;
+          color: #616161; } }
+
+#site-nav {
+  z-index: 900;
+  right: -200px;
+  width: 200px; }
+  #site-nav .table-content-main {
+    padding-left: 0; }
+    #site-nav .table-content-main li {
+      text-align: center; }
+      #site-nav .table-content-main li a {
+        border-left: 0; }
+        #site-nav .table-content-main li a:hover {
+          padding-left: 0; }
 
 #site-process {
   position: fixed;
