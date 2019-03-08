@@ -59,7 +59,7 @@
     '/js/scroll.js',
     '/js/backTop.js',
     '/js/time.js',
-    '/js/search.js',
+    '/js/header.js',
     '/js/passage.js'
   ];
 
