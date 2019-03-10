@@ -2,7 +2,7 @@
   <div class="site-header-brand">
     <% if(theme.nav_name) { %>
       <span class="site-header-brand-title">
-        <a href="/"><%- theme.nav_name %></a>
+        <a href="<%- url_for('/') %>"><%- theme.nav_name %></a>
       </span>
     <% } %>
     <% if(theme.motto) { %>
@@ -12,7 +12,7 @@
   <div class="site-header-right">
     <nav class="site-header-navigation">
       <% for(let link of theme.nav) { %>
-        <a href="<%- link.path %>" target="<%- link.path.startsWith('http') ? '_blank' : '_self' %>"><%= link.name%></a>
+        <a href="<%- url_for(link.path) %>" target="<%- link.path.startsWith('http') ? '_blank' : '_self' %>"><%= link.name%></a>
       <% } %>
     </nav>
     <div class="site-header-btn">
@@ -38,7 +38,7 @@
     <ol class="toc">
       <% for(let link of theme.nav) { %>
         <li class="toc-item">
-          <a href="<%- link.path %>" target="<%- link.path.startsWith('http') ? '_blank' : '_self' %>">
+          <a href="<%- url_for(link.path) %>" target="<%- link.path.startsWith('http') ? '_blank' : '_self' %>">
             <%= link.name %>
           </a>
         </li>
