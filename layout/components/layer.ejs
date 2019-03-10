@@ -12,7 +12,7 @@
       <div class="site-layer-reward" id="site-layer-reward" style="display: none;">
         <% for(let reward of theme.reward) { %>
           <div>
-            <img src="<%- reward.src %>" alt="<%= reward.alt %>">
+            <img src="<%- url_for(reward.src) %>" alt="<%= reward.alt %>">
             <% if(reward.alt.length > 0) { %>
               <p><%= reward.alt %></p>
             <% } %>

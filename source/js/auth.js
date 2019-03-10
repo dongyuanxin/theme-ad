@@ -1,8 +1,7 @@
 (() => {
   const auth = () => {
     const day = 60 * 60 * 24 * 1000;
-    const config = window.AD_CONFIG;
-    const { is_post, lock, passwords } = config;
+    const { is_post, lock, passwords, root } = window.AD_CONFIG;
 
     if(is_post === false || lock === false) {
       return;
@@ -23,13 +22,13 @@
       window.localStorage.setItem('auth', btoa(`${password}:${expires}`));
     } else {
       alert('您没有阅读权限');
-      window.location.href = '/';
+      window.location.href = root;
     }
   };
 
   // print github and demo info
   console.log(
-    '\n%c Theme-AD v2.1.0 %c' + 
+    '\n%c Theme-AD v2.1.2 %c' + 
     ' 🎉 https://github.com/dongyuanxin/theme-ad 🎉\n' + 
     '\n%c Preview Online %c' + 
     ' 🔍 https://godbmw.com/ 🔍  \n' , 
