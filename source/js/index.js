@@ -52,24 +52,26 @@
     });
   };
 
+  const { root } = window.AD_CONFIG;
+
   // load after DOM built
   const documentSrcs = [
-    '/js/copy.js',
-    '/js/layer.js',
-    '/js/scroll.js',
-    '/js/backTop.js',
-    '/js/time.js',
-    '/js/header.js',
-    '/js/passage.js'
-  ];
+    'js/copy.js',
+    'js/layer.js',
+    'js/scroll.js',
+    'js/backTop.js',
+    'js/time.js',
+    'js/header.js',
+    'js/passage.js'
+  ].map(item => `${root}${item}`);
 
   // load after all srcs loaded
   const windowSrcs = [
-    '/js/leancloud.js',
-    '/js/share.js',
-    '/js/reward.js',
-    '/js/mathjax.js'
-  ];
+    'js/leancloud.js',
+    'js/share.js',
+    'js/reward.js',
+    'js/mathjax.js'
+  ].map(item => `${root}${item}`);
 
   const documentSrcScripts = documentSrcs.map(src => loadScript(src));
   const windowSrcScripts = windowSrcs.map(src => loadScript(src));

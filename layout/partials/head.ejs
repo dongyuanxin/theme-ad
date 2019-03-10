@@ -71,8 +71,8 @@
   <%- js(['/vendor/sha256.min.js', '/js/auth.js', '/js/index.js', '/vendor/qrcode.min.js']) %>
 
   <% if (theme.favicon){ %>
-    <link rel="icon" href="<%- theme.favicon.icon %>">
-    <link rel="apple-touch-icon" href="<%- theme.favicon.touch_icon %>">
+    <link rel="icon" href="<%- url_for(theme.favicon.icon) %>">
+    <link rel="apple-touch-icon" href="<%- url_for(theme.favicon.touch_icon) %>">
   <% } %>
 
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">

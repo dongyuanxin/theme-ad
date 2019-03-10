@@ -15,7 +15,7 @@
             <div class="friend-card-meta">
               <p><%= friend.meta %></p>
             </div>
-            <img class="friend-card-avatar" src="<%- cdn + friend.avatar %>"/>
+            <img class="friend-card-avatar" src="<%- cdn ? cdn + friend.avatar : url_for(friend.avatar) %>"/>
           </div>
           <div class="friend-card-content">
             <div class="friend-card-content-title"><%= friend.nickname %></div>
