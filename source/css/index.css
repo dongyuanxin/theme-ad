@@ -104,7 +104,7 @@ main {
     padding-left: 50px;
     padding-right: 50px; } }
 .site-comment-contanier #site-comment-info {
-  padding: 5px;
+  padding: 5px 0;
   line-height: 2;
   font-size: 16px;
   font-weight: bold; }
