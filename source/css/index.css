@@ -89,27 +89,34 @@ main {
     .bottom-bar #site-toggle-share-btn {
       display: none; } }
 
-.site-comment-contanier {
+.site-comment-contanier #site-comment-info, .site-comment-contanier #site-comment, .site-comment-contanier #disqus_thread {
+  max-width: 1024px;
+  margin: 0 auto; }
+.site-comment-contanier[data-plateform="leancloud"] {
   background: white;
   padding-top: 30px; }
-  .site-comment-contanier #site-comment-info, .site-comment-contanier #site-comment {
-    max-width: 1024px;
-    margin: 0 auto; }
+@media screen and (max-width: 768px) {
+  .site-comment-contanier {
+    padding-left: 20px;
+    padding-right: 20px; } }
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .site-comment-contanier {
+    padding-left: 50px;
+    padding-right: 50px; } }
+.site-comment-contanier #site-comment-info {
+  padding: 5px;
+  line-height: 2;
+  font-size: 16px;
+  font-weight: bold; }
+.site-comment-contanier #site-comment {
+  padding-bottom: 20px; }
+  .site-comment-contanier #site-comment .vinfo .vcount {
+    display: none !important; }
+.site-comment-contanier #disqus_thread {
+  padding-bottom: 30px; }
   @media screen and (max-width: 768px) {
-    .site-comment-contanier {
-      padding: 30px 20px 0; } }
-  @media screen and (min-width: 769px) and (max-width: 1024px) {
-    .site-comment-contanier {
-      padding: 30px 50px 0; } }
-  .site-comment-contanier #site-comment-info {
-    padding: 5px;
-    line-height: 2;
-    font-size: 16px;
-    font-weight: bold; }
-  .site-comment-contanier #site-comment {
-    padding-bottom: 20px; }
-    .site-comment-contanier #site-comment .vinfo .vcount {
-      display: none !important; }
+    .site-comment-contanier #disqus_thread {
+      padding-bottom: 20px; } }
 
 #site-layer {
   z-index: 600;

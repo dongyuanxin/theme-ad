@@ -1,6 +1,9 @@
 <%
   let catalog = false, 
-    comments = false,
+    comments = {
+      link: '',
+      enable: false
+    },
     next = {
       link: 'javascript:void(0);',
       enable: false
@@ -28,8 +31,15 @@
   } 
   
   if (is_post() || page.type === 'about' || page.type === 'friends') {
-    comments = true;
     catalog = true;
+    
+    if(theme.leancloud.comment) {
+      comments.enable = true;
+      comments.link = '#site-comment';
+    } else if (theme.disqus.enable) {
+      comments.enable = true;
+      comments.link = '#disqus_thread';
+    }
   }
 %>
 
@@ -46,8 +56,8 @@
     <a href="javascript:void(0);" data-enable="<%- catalog %>" id="site-toc-show-btn">
       <i class="fa fa-bars"></i>
     </a>
-    <% if(theme.leancloud.comment) { %>
-      <a href="<%- comments ? '#site-comment' : 'javascript:void(0);'%>" data-enable="<%- comments %>">
+    <% if(theme.leancloud.comment || theme.disqus.enable) { %>
+      <a href="<%- comments.enable ? comments.link : 'javascript:void(0);' %>" data-enable="<%- comments.enable %>">
         <i class="fa fa-commenting"></i>
       </a>
     <% } %>

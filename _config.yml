@@ -49,10 +49,15 @@ leancloud:
   comment: true # 是否开启评论系统
   count: true # 是否开启文章统计
 
-# 需要保证leancloud.comment为true
+# 需要保证leancloud.count为true
 welcome: 
   enable: true
   interval: 30
+
+# 需要保证leancloud.comment为true
+disqus: 
+  enable: false
+  id: 
 
 # 存放sha256加密的密码
 # 拥有所有加锁文章的阅读权限
