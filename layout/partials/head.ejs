@@ -66,6 +66,10 @@
     <script src="//unpkg.com/valine/dist/Valine.min.js" async></script>
   <% } %>
 
+  <% if(theme.busuanzi) { %>
+    <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
+  <% } %>
+
   <%- partial('components/config') %>
 
   <%- js(['/vendor/sha256.min.js', '/js/auth.js', '/js/index.js', '/vendor/qrcode.min.js']) %>

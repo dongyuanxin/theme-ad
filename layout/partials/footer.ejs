@@ -17,6 +17,11 @@
       <div class="site-footer-info">
         <i class="fa fa-paw"></i> 您是本站第 <span id="site-count"></span> 位访客
       </div>
+    <% } else if(theme.busuanzi === true) { %>
+      <div class="site-footer-info">
+        <i class="fa fa-paw"></i>
+        <span id="busuanzi_container_site_pv">您是本站第 <span id="busuanzi_value_site_pv"></span> 位访客</span>
+      </div>
     <% } %>
     <% if(theme.footer_contact) { %>
       <div class="site-footer-info">
