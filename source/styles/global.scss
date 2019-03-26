@@ -12,7 +12,7 @@ html {
 }
 
 body, input, label, select, option, textarea, button, fieldset, legend {
-  font-family: "Consolas", "Microsoft Jhenghei", "Hiragino Sans GB", "Microsoft YaHei";
+  font-family: $layout-font;
 }
 
 body {
