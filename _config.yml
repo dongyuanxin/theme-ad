@@ -51,7 +51,7 @@ leancloud:
 
 # 需要保证leancloud.count为true
 welcome: 
-  enable: true
+  enable: false
   interval: 30
 
 # 需要保证leancloud.comment为false
