@@ -20,7 +20,7 @@
           <div class="friend-card-content">
             <div class="friend-card-content-title"><%= friend.nickname %></div>
             <a href="<%- friend.site %>" target="_blank" class="friend-card-content-site">
-              <%= friend.site.match(/(?:\w+\.)+\w+/)[0] %>
+              <%= friend.site.match(/(http:\/\/|https:\/\/|\/\/)?([^/]*)/)[2] %>
             </a>
           </div>
         </div>
