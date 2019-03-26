@@ -11,7 +11,7 @@ html {
   color: #212121; }
 
 body, input, label, select, option, textarea, button, fieldset, legend {
-  font-family: "Consolas", "Microsoft Jhenghei", "Hiragino Sans GB", "Microsoft YaHei"; }
+  font-family: Consolas, Microsoft Jhenghei, Hiragino Sans GB, Microsoft YaHei; }
 
 body {
   margin: 0;
@@ -299,7 +299,7 @@ main {
     max-height: calc(100% - 60px);
     overflow: auto;
     padding: 20px 0 20px 13px;
-    font-family: Lato, Helvetica Neue For Number, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif; }
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; }
     .table-content-main ol, .table-content-main ul, .table-content-main li {
       list-style: none; }
     .table-content-main .toc-item {
@@ -418,7 +418,8 @@ main {
 
 .site-footer-wrapper {
   background: #455A64;
-  margin-bottom: 50px; }
+  margin-bottom: 50px;
+  word-break: break-all; }
 
 .site-footer {
   display: flex;
@@ -542,7 +543,7 @@ main {
   margin: 20px auto; }
   .passage-article {
     font-size: 16px;
-    font-family: Lato, Helvetica Neue For Number, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     line-height: 2;
     letter-spacing: 0.2px;
     word-break: break-word; }
@@ -604,11 +605,11 @@ main {
           left: 0;
           right: auto; }
     .passage-article code {
-      font-family: "Consolas", "Microsoft Jhenghei", "Hiragino Sans GB", "Microsoft YaHei";
-      padding: 4px 6px;
+      font-family: Consolas, Microsoft Jhenghei, Hiragino Sans GB, Microsoft YaHei;
       background: #EEEEEE;
       color: #D84315;
-      word-wrap: break-word; }
+      word-wrap: break-word;
+      margin: 0 3px; }
     .passage-article img {
       display: block;
       margin: 0 auto;
@@ -809,7 +810,7 @@ main {
       border-width: 3px;
       left: -40px; }
   .timeline-item {
-    font-family: Lato, Helvetica Neue For Number, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     position: relative;
     padding-left: 100px; }
     .timeline-item time {

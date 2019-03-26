@@ -4,6 +4,6 @@
     <span>目录</span>
   </div>
   <div class="table-content-main">
-    <%- toc(page.more, {list_number: false}) %>
+    <%- toc(page.more, {list_number: !!page.toc_number}) %>
   </div>
 </aside>

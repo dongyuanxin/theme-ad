@@ -7,9 +7,12 @@
       return;
     }
 
-    e.preventDefault();
-    
     const selection = window.getSelection().toString();
+    if(selection.length <= 42) {
+      return;
+    }
+
+    e.preventDefault();
 
     const textData = selection + '\n\n'
       + (author ? `作者: ${author}\n` : '')
