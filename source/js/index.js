@@ -62,15 +62,15 @@
     'js/backTop.js',
     'js/time.js',
     'js/header.js',
-    'js/passage.js'
+    'js/passage.js',
+    'js/share.js',
+    'js/reward.js',
   ].map(item => `${root}${item}`);
 
   // load after all srcs loaded
   const windowSrcs = [
     'js/leancloud.js',
-    'js/share.js',
-    'js/reward.js',
-    'js/mathjax.js'
+    'js/mathjax.js',
   ].map(item => `${root}${item}`);
 
   const documentSrcScripts = documentSrcs.map(src => loadScript(src));
