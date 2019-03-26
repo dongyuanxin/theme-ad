@@ -28,7 +28,7 @@
 
   // print github and demo info
   console.log(
-    '\n%c Theme-AD v2.3.0 %c' + 
+    '\n%c Theme-AD v2.4.0 %c' + 
     ' 🎉 https://github.com/dongyuanxin/theme-ad 🎉\n' + 
     '\n%c Preview Online %c' + 
     ' 🔍 https://godbmw.com/ 🔍  \n' , 
