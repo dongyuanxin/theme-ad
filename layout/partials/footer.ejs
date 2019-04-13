@@ -6,7 +6,7 @@
           <h5 class="site-footer-title"><%= col.title %></h5>
           <% for(let item of col.children) { %>
             <span class="site-footer-item">
-              <a href="<%- item.path %>" target="<%- item.path.startsWith('http') ? '_blank' : '_self' %>"><%= item.name %></a>
+              <a href="<%- item.path %>" target="<%- (/^(http\:|https\:)/i).test(item.path) ? '_blank' : '_self' %>"><%= item.name %></a>
             </span>
           <% } %>
         </div>
