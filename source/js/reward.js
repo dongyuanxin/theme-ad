@@ -7,6 +7,10 @@
   const layer = document.querySelector('#site-layer'),
     title = document.querySelector('#site-layer-title'),
     rewardContainerDOM = document.querySelector('#site-layer-reward');
+  
+  if(!rewardContainerDOM) {
+    return;
+  }
 
   rewardDOM.addEventListener('click', (e) => {
     e.preventDefault();

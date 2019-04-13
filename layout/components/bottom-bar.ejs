@@ -64,9 +64,11 @@
     <a href="javascript:void(0);" id="site-toggle-share-btn">
       <i class="fa fa-share-alt"></i>
     </a>
-    <a href="javascript:void(0);" id="site-reward">
-      <i class="fa fa-thumbs-up"></i>
-    </a>
+    <% if(Array.isArray(theme.reward) && theme.reward.length) { %>
+      <a href="javascript:void(0);" id="site-reward">
+        <i class="fa fa-thumbs-up"></i>
+      </a>
+    <% } %>
     <a href="javascript:void(0);" id="back-top-btn">
       <i class="fa fa-chevron-up"></i>
     </a>
