@@ -332,6 +332,10 @@ main {
   padding-left: 10px;
   background: #FAFAFA;
   z-index: 300; }
+  @media screen and (min-width: 769px) {
+    .site-header {
+      border-bottom: transparent solid 2px;
+      box-shadow: 0 2px 2px #ECEFF1; } }
   @media screen and (max-width: 768px) {
     .site-header {
       background: #F5F5F5; } }
@@ -355,6 +359,7 @@ main {
     font-size: 16px;
     padding-left: 10px;
     display: flex;
+    align-items: center;
     overflow: auto; }
     @media screen and (max-width: 768px) {
       .site-header-navigation {

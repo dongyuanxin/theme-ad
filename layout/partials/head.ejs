@@ -57,19 +57,19 @@
   <% } %>
 
   <% if(theme.leancloud.comment || theme.leancloud.count){ %>
-    <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.11.1/dist/av-min.js" async></script>
+    <script src="<%- theme.cdn.leancloud %>" async></script>
   <% } %>
 
   <% if(theme.mathjax) { %>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+    <script type="text/javascript" src="<%- theme.cdn.mathjax %>" async></script>
   <% } %>
 
   <% if(theme.leancloud.comment) { %>
-    <script src="//unpkg.com/valine/dist/Valine.min.js" async></script>
+    <script src="<%- theme.cdn.valine %>" async></script>
   <% } %>
 
   <% if(theme.busuanzi) { %>
-    <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
+    <script src="<%- theme.cdn.busuanzi %>" async></script>
   <% } %>
 
   <%- partial('components/config') %>
@@ -81,7 +81,7 @@
     <link rel="apple-touch-icon" href="<%- url_for(theme.favicon.touch_icon) %>">
   <% } %>
 
-  <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="<%- theme.cdn.font_awesome %>" rel="stylesheet">
 
   <%- css(['/css/index.css', '/styles/components/highlight/highlight.css']) %>
 

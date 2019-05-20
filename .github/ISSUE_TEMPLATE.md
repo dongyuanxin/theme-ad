@@ -5,7 +5,7 @@
 #### Do you want to request a _feature_ or report a _bug_ or just a _question_?
 
 <!-- 
-If you have a question, please make sure you have read document carefully. 
+If you have a question, please make sure you have read document and docs/常见问题.md carefully. 
 
 You can also ask by sending email to yuanxin.me@gmail.com.
 -->
