@@ -161,8 +161,15 @@ main {
   align-items: center; }
 .site-layer-input {
   display: flex;
+  align-items: center;
   width: 100%;
   position: relative; }
+  .site-layer-input-choose {
+    position: relative;
+    margin-right: 10px;
+    min-width: 55px;
+    text-align: center;
+    cursor: pointer; }
   .site-layer-input input {
     list-style: none;
     width: 100%;
