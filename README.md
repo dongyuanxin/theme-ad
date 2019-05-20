@@ -12,7 +12,7 @@
 [![](https://img.shields.io/badge/leancloud-v3.11.1-blue.svg?style=popout-square)](https://leancloud.cn/)
 [![](https://img.shields.io/badge/license-MIT-blue.svg?style=popout-square)](https://github.com/dongyuanxin/theme-ad)
 
-- README / [中文介绍](./README.cn.md)
+- README / [中文介绍](./docs/README.cn.md)
 - DOCUMENT / [中文文档](https://godbmw.com/passages/2019-03-03-theme-ad-docs-zh/)
 
 ## Preview
