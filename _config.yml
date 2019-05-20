@@ -84,6 +84,7 @@ analytics:
     enable: false
     id: 
 
+# 打赏图片
 reward:
   -
     src: /images/wechat.png
@@ -91,6 +92,15 @@ reward:
   -
     src: /images/alipay.png
     alt: "AliPay"
+
+# 第三方库的CDN地址
+# 请根据情况自行决定是否替换为国内CDN
+cdn: 
+  leancloud: "//cdn.jsdelivr.net/npm/leancloud-storage@3.11.1/dist/av-min.js"
+  mathjax: "//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"
+  valine: "//unpkg.com/valine/dist/Valine.min.js"
+  busuanzi: "//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"
+  font_awesome: "//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
 
 nav:
   -
