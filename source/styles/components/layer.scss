@@ -56,8 +56,17 @@
 
   &-input {
     display: flex;
+    align-items: center;
     width: 100%;
     position: relative;
+
+    &-choose {
+      position: relative;
+      margin-right: 10px;
+      min-width: 55px;
+      text-align: center;
+      cursor: pointer;
+    }
     
     input {
       list-style: none;
