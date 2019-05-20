@@ -7,13 +7,13 @@
 [![](https://img.shields.io/badge/made_with-love-ff69b4.svg?style=popout-square)](https://godbmw.com/)
 [![](https://img.shields.io/badge/build-passing-success.svg?style=popout-square)](https://github.com/dongyuanxin/theme-ad)
 [![](https://img.shields.io/badge/code_size-127KB-ff9800.svg?style=popout-square)](https://godbmw.com/)
-[![](https://img.shields.io/badge/release-v2.6.0-blue.svg?style=popout-square)](https://github.com/dongyuanxin/theme-ad/releases)
+[![](https://img.shields.io/badge/release-v2.8.0-blue.svg?style=popout-square)](https://github.com/dongyuanxin/theme-ad/releases)
 [![](https://img.shields.io/badge/hexo-≥v3.0-blue.svg?style=popout-square)](https://hexo.io/)
 [![](https://img.shields.io/badge/leancloud-v3.11.1-blue.svg?style=popout-square)](https://leancloud.cn/)
 [![](https://img.shields.io/badge/license-MIT-blue.svg?style=popout-square)](https://github.com/dongyuanxin/theme-ad)
 
 - README / [中文介绍](./docs/README.cn.md)
-- DOCUMENT / [中文文档](https://godbmw.com/passages/2019-03-03-theme-ad-docs-zh/)
+- DOCUMENT / [中文文档](./docs/中文文档.md)
 - PROBLEM / [常见问题](./docs/常见问题.md)
 
 ## Preview
@@ -35,14 +35,6 @@
 - **Icon**: Use the icon provided by the open source project "FontAwesome".
 - **Mobile**: Take advantage of CSS3 and modern browsers to make it perform well (just a small amount of style code).
 - **Highlight**: 5 kinds of code highlighting styles provided by "Tomorrow-Theme".
-
-## Todo
-
-- [x] Chinese Document
-- [x] Chinese README
-- [x] Version Test
-- [ ] English Document
-- [ ] Languages Support
 
 ## Contact
 
