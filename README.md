@@ -14,6 +14,7 @@
 
 - README / [中文介绍](./docs/README.cn.md)
 - DOCUMENT / [中文文档](https://godbmw.com/passages/2019-03-03-theme-ad-docs-zh/)
+- PROBLEM / [常见问题](./docs/常见问题.md)
 
 ## Preview
 
