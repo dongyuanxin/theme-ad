@@ -3,7 +3,7 @@
     <span>
       <i class="fa fa-calendar"></i><%- page.date.format("YYYY-MM-DD") %>
     </span>
-    <% if(page.categories && page.categories.length > 0) { %>
+    <% if(page.categories && page.categories.data && page.categories.length > 0) { %>
       <span>
         | <a href="<%- url_for(page.categories.data[0].path) %>"><i class="fa fa-bookmark"></i><%- page.categories.data[0].name %></a>
       </span>
