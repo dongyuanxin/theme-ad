@@ -3,7 +3,7 @@
     <span>
       <i class="fa fa-calendar"></i><%- page.date.format("YYYY-MM-DD") %>
     </span>
-    <% if(page.categories.length > 0) { %>
+    <% if(page.categories && page.categories.data && page.categories.length > 0) { %>
       <span>
         | <a href="<%- url_for(page.categories.data[0].path) %>"><i class="fa fa-bookmark"></i><%- page.categories.data[0].name %></a>
       </span>
@@ -44,7 +44,7 @@
       </div>
     </aside>
   <% } %>
-  <% if(page.tags.length > 0) { %>
+  <% if(page.tags && page.tags.length > 0) { %>
     <div class="passage-tags">
     <% for(let tag of page.tags.data) { %> 
       <a href="<%- url_for(tag.path) %>"><i class="fa fa-tags"></i><%- tag.name %></a>
