@@ -691,6 +691,7 @@ main {
     padding: 15px 20px;
     margin-top: 30px; }
     .passage-copyright div {
+      word-wrap: break-word;
       line-height: 2; }
     .passage-copyright a {
       transition: all .1s linear; }
